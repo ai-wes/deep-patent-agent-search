@@ -31,6 +31,7 @@ from google.genai import types as genai_types
 from pydantic import BaseModel, Field
 
 from .config import config
+from .app_utils.trace_persistence import AgentEventTrace
 
 
 # --- Structured Output Models ---
@@ -155,6 +156,69 @@ def citation_replacement_callback(
     callback_context.state["final_report_with_citations"] = processed_report
     return genai_types.Content(parts=[genai_types.Part(text=processed_report)])
 
+def trace_persistence_callback(callback_context: CallbackContext) -> None:
+    """Callback to persist agent events and session state for traceability and reproducibility.
+
+    This callback captures all events from the session and saves them to persistent storage.
+    It also creates snapshots of the session state at key milestones.
+
+    Args:
+        callback_context (CallbackContext): The context object providing access to the agent's
+            session events and persistent state.
+    """
+    try:
+        session = callback_context._invocation_context.session
+        session_id = session.session_id
+
+        # Get the agent engine app instance to access trace service
+        agent_engine = None
+        if hasattr(callback_context, '_invocation_context') and \
+           hasattr(callback_context._invocation_context, 'app'):
+            agent_engine = callback_context._invocation_context.app
+
+        if not agent_engine or not hasattr(agent_engine, 'save_agent_event_trace'):
+            logging.warning("Agent engine not available for trace persistence")
+            return
+
+        # Save all events in the current session
+        for event in session.events:
+            try:
+                # Add additional metadata about the session state
+                additional_metadata = {
+                    "session_state_keys": list(session.state.keys()),
+                    "event_count": len(session.events),
+                    "current_event_index": session.events.index(event)
+                }
+
+                # Save the event trace
+                agent_engine.save_agent_event_trace(
+                    event,
+                    session_id,
+                    "agent_event",
+                    additional_metadata
+                )
+
+            except Exception as e:
+                logging.error(f"Failed to save event trace: {str(e)}", exc_info=True)
+
+        # Create session snapshots at key milestones
+        if len(session.events) % 5 == 0 or len(session.events) == 1:  # Every 5 events or first event
+            try:
+                sources = callback_context.state.get("sources", {})
+                url_to_short_id = callback_context.state.get("url_to_short_id", {})
+
+                agent_engine.save_session_snapshot(
+                    session_id,
+                    dict(session.state),
+                    sources,
+                    url_to_short_id
+                )
+            except Exception as e:
+                logging.error(f"Failed to save session snapshot: {str(e)}", exc_info=True)
+
+    except Exception as e:
+        logging.error(f"Trace persistence callback failed: {str(e)}", exc_info=True)
+
 
 # --- Custom Agent for Loop Control ---
 class EscalationChecker(BaseAgent):
@@ -184,37 +248,51 @@ class EscalationChecker(BaseAgent):
 plan_generator = LlmAgent(
     model=config.worker_model,
     name="plan_generator",
-    description="Generates or refine the existing 5 line action-oriented research plan, using minimal search only for topic clarification.",
+    description="Generates comprehensive, broad patent & literature search queries optimized for maximum recall. Designs search plans that will return at minimum 10-15 patent results. Prioritizes breadth over precision to ensure comprehensive coverage of the patent landscape.",
     instruction=f"""
-    You are a research strategist. Your job is to create a high-level RESEARCH PLAN, not a summary. If there is already a RESEARCH PLAN in the session state,
-    improve upon it based on the user feedback.
+    You are the Prior Art Planner. Your task is to generate broad, balanced search queries suitable for patent and literature databases.
+    Your reply must be valid JSON — no extra commentary.
 
-    RESEARCH PLAN(SO FAR):
-    {{ research_plan? }}
+    **CRITICAL REQUIREMENTS:**
+    1. Generate search queries designed to return AT MINIMUM 10-15 patent results
+    2. Prefer broad queries with high recall over narrow, restrictive queries
+    3. Keep boolean_core simple - avoid complex AND/OR chains that reduce recall
+    4. Generate at least 3-5 narrowed variants with different keyword combinations
+    5. Minimize negative_filters - only exclude terms that are definitively unrelated
+    6. Use double quotes only for JSON
+    7. No comments or placeholders
+    8. Queries must be broad enough to retrieve many patents
 
-    **GENERAL INSTRUCTION: CLASSIFY TASK TYPES**
-    Your plan must clearly classify each goal for downstream execution. Each bullet point should start with a task type prefix:
-    - **`[RESEARCH]`**: For goals that primarily involve information gathering, investigation, analysis, or data collection (these require search tool usage by a researcher).
-    - **`[DELIVERABLE]`**: For goals that involve synthesizing collected information, creating structured outputs (e.g., tables, charts, summaries, reports), or compiling final output artifacts (these are executed AFTER research tasks, often without further search).
+    **INPUT ANALYSIS:**
+    - Read the invention_description, target, synonyms, compound_names, and extra_queries
+    - If any are missing, treat them as empty lists
+    - Combine the target name, any synonyms, and compound_names into one OR-joined group
+    - Add at most one contextual keyword (like inhibitor, antagonist, or modulator) only if clearly relevant
 
-    **INITIAL RULE: Your initial output MUST start with a bulleted list of 5 action-oriented research goals or key questions, followed by any *inherently implied* deliverables.**
-    - All initial 5 goals will be classified as `[RESEARCH]` tasks.
-    - A good goal for `[RESEARCH]` starts with a verb like "Analyze," "Identify," "Investigate."
-    - A bad output is a statement of fact like "The event was in April 2024."
-    - **Proactive Implied Deliverables (Initial):** If any of your initial 5 `[RESEARCH]` goals inherently imply a standard output or deliverable (e.g., a comparative analysis suggesting a comparison table, or a comprehensive review suggesting a summary document), you MUST add these as additional, distinct goals immediately after the initial 5. Phrase these as *synthesis or output creation actions* (e.g., "Create a summary," "Develop a comparison," "Compile a report") and prefix them with `[DELIVERABLE][IMPLIED]`.
+    **QUERY GENERATION:**
+    - "boolean_core": a concise Boolean string combining identifiers with OR logic
+    - "synonyms": a unique, clean array of identifiers and alternative names
+    - "ipc_hints": one or two plausible IPC classes if evident (e.g., "A61K 31/00" for small molecules, "A61P" for pharmacological activity)
+    - "narrowed": 3-5 broad query variations with different keyword combinations
+    - "negative_filters": a few exclusion terms (like "diagnostic", "vaccine", "gene therapy") only if obviously irrelevant
+    - "timespan_hint": a general range such as "2000-2025"
 
-    **REFINEMENT RULE**:
-    - **Integrate Feedback & Mark Changes:** When incorporating user feedback, make targeted modifications to existing bullet points. Add `[MODIFIED]` to the existing task type and status prefix (e.g., `[RESEARCH][MODIFIED]`). If the feedback introduces new goals:
-        - If it's an information gathering task, prefix it with `[RESEARCH][NEW]`.
-        - If it's a synthesis or output creation task, prefix it with `[DELIVERABLE][NEW]`.
-    - **Proactive Implied Deliverables (Refinement):** Beyond explicit user feedback, if the nature of an existing `[RESEARCH]` goal (e.g., requiring a structured comparison, deep dive analysis, or broad synthesis) or a `[DELIVERABLE]` goal inherently implies an additional, standard output or synthesis step (e.g., a detailed report following a summary, or a visual representation of complex data), proactively add this as a new goal. Phrase these as *synthesis or output creation actions* and prefix them with `[DELIVERABLE][IMPLIED]`.
-    - **Maintain Order:** Strictly maintain the original sequential order of existing bullet points. New bullets, whether `[NEW]` or `[IMPLIED]`, should generally be appended to the list, unless the user explicitly instructs a specific insertion point.
-    - **Flexible Length:** The refined plan is no longer constrained by the initial 5-bullet limit and may comprise more goals as needed to fully address the feedback and implied deliverables.
+    **EXAMPLE OUTPUT:**
+    {{
+      "boolean_core": "RET OR receptor tyrosine kinase OR RET proto-oncogene",
+      "synonyms": ["RET", "proto-oncogene tyrosine-protein kinase receptor Ret", "receptor tyrosine kinase", "CDHF12"],
+      "ipc_hints": ["A61K 31/00", "A61P"],
+      "narrowed": [
+        "RET inhibitor",
+        "RET therapeutic",
+        "receptor tyrosine kinase inhibitor",
+        "RET compound",
+        "RET modulator"
+      ],
+      "negative_filters": [],
+      "timespan_hint": "2000-2025"
+    }}
 
-    **TOOL USE IS STRICTLY LIMITED:**
-    Your goal is to create a generic, high-quality plan *without searching*.
-    Only use `google_search` if a topic is ambiguous or time-sensitive and you absolutely cannot create a plan without a key piece of identifying information.
-    You are explicitly forbidden from researching the *content* or *themes* of the topic. That is the next agent's job. Your search is only to identify the subject, not to investigate it.
     Current date: {datetime.datetime.now().strftime("%Y-%m-%d")}
     """,
     tools=[google_search],
@@ -243,51 +321,51 @@ section_planner = LlmAgent(
 section_researcher = LlmAgent(
     model=config.worker_model,
     name="section_researcher",
-    description="Performs the crucial first pass of web research.",
+    description="CRITICAL: Retrieve and structure at minimum 10 patent documents from every configured database. If initial searches return fewer than 10 results, immediately broaden queries or try alternative search terms. Never return zero or empty results.",
     planner=BuiltInPlanner(
         thinking_config=genai_types.ThinkingConfig(include_thoughts=True)
     ),
     instruction="""
-    You are a highly capable and diligent research and synthesis agent. Your comprehensive task is to execute a provided research plan with **absolute fidelity**, first by gathering necessary information, and then by synthesizing that information into specified outputs.
+    You are a Patent Analyst who exhaustively queries patent databases. Your primary responsibility is ensuring comprehensive coverage: always return at least 10 patent records, even if relevance is low. You systematically try multiple queries, broaden search terms, remove restrictive filters, and use fallback searches until the minimum result threshold is met.
 
-    You will be provided with a sequential list of research plan goals, stored in the `research_plan` state key. Each goal will be clearly prefixed with its primary task type: `[RESEARCH]` or `[DELIVERABLE]`.
+    **CRITICAL REQUIREMENTS:**
+    1. Retrieve and structure at minimum 10 patent documents from every configured database
+    2. If initial searches return fewer than 10 results, immediately broaden queries or try alternative search terms
+    3. Never return zero or empty results
+    4. Rate each result on a 0-1 relevance scale, but include lower-relevance results if needed to reach the 10-result minimum
 
-    Your execution process must strictly adhere to these two distinct and sequential phases:
+    **PATENT SEARCH PROCESS:**
+    1. Execute the search plan generated by the Prior Art Planner
+    2. Use the boolean_core query and all narrowed variants
+    3. Apply negative_filters to exclude obviously irrelevant patents
+    4. Ensure you search across multiple patent databases (Google Patents, PatentsView, etc.)
+    5. If results are insufficient (<10 patents), automatically broaden the search by:
+       - Removing restrictive filters
+       - Using broader keyword variations
+       - Expanding to related terms
 
-    ---
+    **DATA STRUCTURE:**
+    For each patent found, extract and structure the following information:
+    - Publication number and title
+    - Assignee and inventors
+    - Filing date and publication date
+    - Abstract and claims excerpt
+    - IPC/CPC classification and jurisdiction
+    - URL to the patent document
+    - Relevance score (0-1) based on claim overlap with the invention
 
-    **Phase 1: Information Gathering (`[RESEARCH]` Tasks)**
+    **OUTPUT FORMAT:**
+    Return structured patent data that can be used for:
+    - Prior art analysis
+    - Competitive landscape mapping
+    - Freedom-to-operate assessment
+    - Patent similarity analysis
 
-    *   **Execution Directive:** You **MUST** systematically process every goal prefixed with `[RESEARCH]` before proceeding to Phase 2.
-    *   For each `[RESEARCH]` goal:
-        *   **Query Generation:** Formulate a comprehensive set of 4-5 targeted search queries. These queries must be expertly designed to broadly cover the specific intent of the `[RESEARCH]` goal from multiple angles.
-        *   **Execution:** Utilize the `google_search` tool to execute **all** generated queries for the current `[RESEARCH]` goal.
-        *   **Summarization:** Synthesize the search results into a detailed, coherent summary that directly addresses the objective of the `[RESEARCH]` goal.
-        *   **Internal Storage:** Store this summary, clearly tagged or indexed by its corresponding `[RESEARCH]` goal, for later and exclusive use in Phase 2. You **MUST NOT** lose or discard any generated summaries.
-
-    ---
-
-    **Phase 2: Synthesis and Output Creation (`[DELIVERABLE]` Tasks)**
-
-    *   **Execution Prerequisite:** This phase **MUST ONLY COMMENCE** once **ALL** `[RESEARCH]` goals from Phase 1 have been fully completed and their summaries are internally stored.
-    *   **Execution Directive:** You **MUST** systematically process **every** goal prefixed with `[DELIVERABLE]`. For each `[DELIVERABLE]` goal, your directive is to **PRODUCE** the artifact as explicitly described.
-    *   For each `[DELIVERABLE]` goal:
-        *   **Instruction Interpretation:** You will interpret the goal's text (following the `[DELIVERABLE]` tag) as a **direct and non-negotiable instruction** to generate a specific output artifact.
-            *   *If the instruction details a table (e.g., "Create a Detailed Comparison Table in Markdown format"), your output for this step **MUST** be a properly formatted Markdown table utilizing columns and rows as implied by the instruction and the prepared data.*
-            *   *If the instruction states to prepare a summary, report, or any other structured output, your output for this step **MUST** be that precise artifact.*
-        *   **Data Consolidation:** Access and utilize **ONLY** the summaries generated during Phase 1 (`[RESEARCH]` tasks`) to fulfill the requirements of the current `[DELIVERABLE]` goal. You **MUST NOT** perform new searches.
-        *   **Output Generation:** Based on the specific instruction of the `[DELIVERABLE]` goal:
-            *   Carefully extract, organize, and synthesize the relevant information from your previously gathered summaries.
-            *   Must always produce the specified output artifact (e.g., a concise summary, a structured comparison table, a comprehensive report, a visual representation, etc.) with accuracy and completeness.
-        *   **Output Accumulation:** Maintain and accumulate **all** the generated `[DELIVERABLE]` artifacts. These are your final outputs.
-
-    ---
-
-    **Final Output:** Your final output will comprise the complete set of processed summaries from `[RESEARCH]` tasks AND all the generated artifacts from `[DELIVERABLE]` tasks, presented clearly and distinctly.
+    Current date: {datetime.datetime.now().strftime("%Y-%m-%d")}
     """,
     tools=[google_search],
-    output_key="section_research_findings",
-    after_agent_callback=collect_research_sources_callback,
+    output_key="patent_search_results",
+    after_agent_callback=[collect_research_sources_callback, trace_persistence_callback],
 )
 
 research_evaluator = LlmAgent(
@@ -335,38 +413,69 @@ enhanced_search_executor = LlmAgent(
     """,
     tools=[google_search],
     output_key="section_research_findings",
-    after_agent_callback=collect_research_sources_callback,
+    after_agent_callback=[collect_research_sources_callback, trace_persistence_callback],
 )
 
 report_composer = LlmAgent(
     model=config.critic_model,
     name="report_composer_with_citations",
     include_contents="none",
-    description="Transforms research data and a markdown outline into a final, cited report.",
+    description="Summarize competitive/IP insights into concise, data-backed narrative paragraphs. Writes briefing notes for counsel and executives without inventing information.",
     instruction="""
-    Transform the provided data into a polished, professional, and meticulously cited research report.
+    You are the Prior Art Reporter. Your task is to transform patent search results and analysis into a comprehensive prior art report.
 
-    ---
-    ### INPUT DATA
-    *   Research Plan: `{research_plan}`
-    *   Research Findings: `{section_research_findings}`
-    *   Citation Sources: `{sources}`
-    *   Report Structure: `{report_sections}`
+    **CRITICAL REQUIREMENTS:**
+    1. Summarize competitive/IP insights into concise, data-backed narrative paragraphs
+    2. Write briefing notes for counsel and executives without inventing information
+    3. Focus on factual analysis based on the patent data provided
+    4. Structure the report to support legal and business decision-making
 
-    ---
-    ### CRITICAL: Citation System
-    To cite a source, you MUST insert a special citation tag directly after the claim it supports.
+    **REPORT STRUCTURE:**
+    Your report must include the following sections:
 
-    **The only correct format is:** `<cite source="src-ID_NUMBER" />`
+    ## Search Scope
+    - Restate the boolean_core query and explain the search strategy
+    - Clarify the inclusion of mutation and disease terminology in plain language
+    - Note the timespan_hint and any filters applied
+    - Spell out disease names in full even if abbreviations appear in data
 
-    ---
-    ### Final Instructions
-    Generate a comprehensive report using ONLY the `<cite source="src-ID_NUMBER" />` tag system for all citations.
-    The final report must strictly follow the structure provided in the **Report Structure** markdown outline.
-    Do not include a "References" or "Sources" section; all citations must be in-line.
+    ## Patent Activity
+    - Report the patent_count and number of unique assignees
+    - Highlight up to three representative patents by publication number, assignee, and factual similarity
+    - If no patents were retrieved, explicitly state this and explain possible reasons
+
+    ## Interpretation
+    - Analyze assignee concentration and IP fragmentation
+    - Assess International Patent Classification coverage
+    - Identify gaps or false-negative risks in the search results
+    - Highlight potential white space opportunities
+
+    ## Recommendations
+    - Provide exactly three numbered action items
+    - Each recommendation must cite specific data trends or absences
+    - Focus on next research steps, query broadening, or validation needs
+    - Include specific rationale for each recommendation
+
+    **DATA SOURCES:**
+    Use the following data from the research pipeline:
+    - research_plan: The search strategy and query parameters
+    - patent_search_results: Structured patent data with relevance scores
+    - patent_analysis: Similarity notes and claim overlap assessments
+    - competitive_landscape: Assignee distribution and market positioning
+
+    **CRITICAL FORMATTING RULES:**
+    1. Use ONLY markdown formatting (## for headers, numbered list for recommendations)
+    2. NO triple backticks or code fences
+    3. NO JSON structures in the final output
+    4. Recommendations section MUST have exactly three numbered items
+    5. Each recommendation must cite specific data trends or absences
+    6. Do not invent facts not present in provided data
+    7. Keep all responses concise and factual
+
+    Current date: {datetime.datetime.now().strftime("%Y-%m-%d")}
     """,
-    output_key="final_cited_report",
-    after_agent_callback=citation_replacement_callback,
+    output_key="prior_art_report",
+    after_agent_callback=[citation_replacement_callback, trace_persistence_callback],
 )
 
 research_pipeline = SequentialAgent(
@@ -391,24 +500,37 @@ research_pipeline = SequentialAgent(
 interactive_planner_agent = LlmAgent(
     name="interactive_planner_agent",
     model=config.worker_model,
-    description="The primary research assistant. It collaborates with the user to create a research plan, and then executes it upon approval.",
+    description="The primary prior art research assistant. Collaborates with the user to create a comprehensive patent search plan and executes the prior art analysis workflow.",
     instruction=f"""
-    You are a research planning assistant. Your primary function is to convert ANY user request into a research plan.
+    You are a Prior Art Research Assistant. Your primary function is to guide users through the prior art analysis process and ensure comprehensive patent coverage.
 
-    **CRITICAL RULE: Never answer a question directly or refuse a request.** Your one and only first step is to use the `plan_generator` tool to propose a research plan for the user's topic.
-    If the user asks a question, you MUST immediately call `plan_generator` to create a plan to answer the question.
+    **CRITICAL RULE: Never answer patent questions directly or refuse a request.** Your one and only first step is to use the `plan_generator` tool to propose a comprehensive patent search plan for the user's invention.
 
-    Your workflow is:
-    1.  **Plan:** Use `plan_generator` to create a draft plan and present it to the user.
-    2.  **Refine:** Incorporate user feedback until the plan is approved.
-    3.  **Execute:** Once the user gives EXPLICIT approval (e.g., "looks good, run it"), you MUST delegate the task to the `research_pipeline` agent, passing the approved plan.
+    **PRIOR ART WORKFLOW:**
+    1.  **Plan:** Use `plan_generator` to create a broad patent search plan optimized for maximum recall
+    2.  **Validate:** Ensure the plan includes multiple query variants and covers all relevant databases
+    3.  **Execute:** Delegate to `research_pipeline` for comprehensive patent retrieval and analysis
+    4.  **Review:** Present structured results including patent counts, assignee analysis, and recommendations
+
+    **SPECIFIC REQUIREMENTS:**
+    - Always generate search plans that will return AT MINIMUM 10-15 patent results
+    - Prioritize breadth over precision to ensure comprehensive coverage
+    - Include multiple query variations with different keyword combinations
+    - Cover multiple patent databases (Google Patents, PatentsView, etc.)
+    - Focus on claim overlap analysis and relevance scoring
+
+    **USER INTERACTION GUIDELINES:**
+    - If user provides invention details, immediately create a search plan
+    - If user asks about patent landscape, generate comprehensive search strategy
+    - If user requests prior art analysis, ensure minimum result thresholds
+    - If results are insufficient, automatically broaden queries and retry
 
     Current date: {datetime.datetime.now().strftime("%Y-%m-%d")}
-    Do not perform any research yourself. Your job is to Plan, Refine, and Delegate.
+    Your job is to Plan, Validate, Execute, and Review the prior art analysis process.
     """,
     sub_agents=[research_pipeline],
     tools=[AgentTool(plan_generator)],
-    output_key="research_plan",
+    output_key="prior_art_plan",
 )
 
 root_agent = interactive_planner_agent

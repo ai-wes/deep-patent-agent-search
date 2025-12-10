@@ -24,6 +24,13 @@ from vertexai.agent_engines.templates.adk import AdkApp
 
 from app.agent import app as adk_app
 from app.app_utils.telemetry import setup_telemetry
+from app.app_utils.trace_persistence import (
+    TracePersistenceService,
+    create_trace_persistence_service_from_env,
+    create_event_trace_from_adk_event,
+    SessionStateSnapshot,
+    AgentEventTrace
+)
 from app.app_utils.typing import Feedback
 
 
@@ -36,6 +43,10 @@ class AgentEngineApp(AdkApp):
         logging.basicConfig(level=logging.INFO)
         logging_client = google_cloud_logging.Client()
         self.logger = logging_client.logger(__name__)
+
+        # Initialize trace persistence service
+        self.trace_service = create_trace_persistence_service_from_env()
+
         if gemini_location:
             os.environ["GOOGLE_CLOUD_LOCATION"] = gemini_location
 
@@ -43,6 +54,63 @@ class AgentEngineApp(AdkApp):
         """Collect and log feedback."""
         feedback_obj = Feedback.model_validate(feedback)
         self.logger.log_struct(feedback_obj.model_dump(), severity="INFO")
+
+    def save_agent_event_trace(self, event: Any, session_id: str, event_type: str = "agent_event", additional_metadata: Optional[dict[str, Any]] = None) -> str:
+        """Save an agent event trace for persistence and reproducibility.
+
+        Args:
+            event: The ADK Event object
+            session_id: The session ID
+            event_type: Type of event
+            additional_metadata: Additional metadata to include
+
+        Returns:
+            The trace ID
+        """
+        try:
+            event_trace = create_event_trace_from_adk_event(
+                event, session_id, event_type, additional_metadata
+            )
+            trace_id = self.trace_service.save_event_trace(event_trace)
+            logger.info(f"Saved agent event trace {trace_id} for session {session_id}")
+            return trace_id
+        except Exception as e:
+            logger.error(f"Failed to save agent event trace: {str(e)}", exc_info=True)
+            raise
+
+    def save_session_snapshot(self, session_id: str, state: dict[str, Any], sources: Optional[dict[str, Any]] = None, url_to_short_id: Optional[dict[str, str]] = None) -> str:
+        """Save a complete session state snapshot for reproducibility.
+
+        Args:
+            session_id: The session ID
+            state: The current session state
+            sources: Optional sources dictionary
+            url_to_short_id: Optional URL to short ID mapping
+
+        Returns:
+            The snapshot ID
+        """
+        try:
+            snapshot = SessionStateSnapshot(
+                session_id=session_id,
+                state=state,
+                sources=sources or {},
+                url_to_short_id=url_to_short_id or {}
+            )
+            snapshot_id = self.trace_service.save_session_snapshot(snapshot)
+            logger.info(f"Saved session snapshot {snapshot_id} for session {session_id}")
+            return snapshot_id
+        except Exception as e:
+            logger.error(f"Failed to save session snapshot: {str(e)}", exc_info=True)
+            raise
+
+    def get_trace_service(self) -> TracePersistenceService:
+        """Get the trace persistence service.
+
+        Returns:
+            The trace persistence service
+        """
+        return self.trace_service
 
     def register_operations(self) -> dict[str, list[str]]:
         """Registers the operations of the Agent."""
