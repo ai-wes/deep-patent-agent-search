@@ -1,0 +1,9 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/compounds.csv",
+  "n": 2663,
+  "parsed": 2663,
+  "parsed_pct": 100.0,
+  "fail_examples": [],
+  "ok": true,
+  "error": null
+}

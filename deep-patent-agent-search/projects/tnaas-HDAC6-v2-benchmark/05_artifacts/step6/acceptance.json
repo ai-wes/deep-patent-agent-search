@@ -1,0 +1,46 @@
+{
+  "min_modalities": 3,
+  "max_negatome_burden_topn": 0.5,
+  "topn": 3,
+  "pass": false,
+  "pass_modalities": false,
+  "pass_negatome": true,
+  "details": [
+    {
+      "target_id": "ENSG00000166949",
+      "composite": 0.6733333333333333,
+      "genetics": 1.0,
+      "expression": 1.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "",
+      "evidence_modalities": 2
+    },
+    {
+      "target_id": "ENSG00000184012",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "",
+      "evidence_modalities": 1
+    },
+    {
+      "target_id": "ENSG00000174775",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "",
+      "evidence_modalities": 1
+    }
+  ]
+}

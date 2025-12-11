@@ -1,0 +1,11 @@
+category,description,required,example,notes
+NDA,Signed NDA document,True,nda.pdf,PDF
+Program Brief,"2 pages: indication, hypothesis, constraints, KPIs",True,brief.md,Markdown or PDF
+Context DB Config,"NLP DB endpoints (Mongo URI, Deep Lake path)",True,"MONGO_URI, DEEPLAKE_PATH","e.g., mongodb://localhost:27017 | ./deeplake/nlp_context"
+Targets,Target list with HGNC/UniProt IDs,False,targets.csv,columns: target_id
+Compounds,Compound library,False,compounds.csv,"columns: compound_id,smiles"
+Assays,Assay results with units,False,assays.xlsx,IC50/EC50 etc.
+Structures,PDB IDs or files,False,structures/,PDB/mmCIF
+Omics,Matrices or data accessions,False,rna_seq.parquet,GEO/SRA IDs or matrices
+Constraints,RO5/MW/window/exclusions,True,constraints.yaml,used in gating
+Timeline,Milestones and decision cadence,True,timeline.md,sprint windows

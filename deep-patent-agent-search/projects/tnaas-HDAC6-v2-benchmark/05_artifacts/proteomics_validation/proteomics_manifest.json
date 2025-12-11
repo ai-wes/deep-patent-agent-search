@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "generated_at": "2025-12-10T18:46:25Z",
+  "config": {
+    "alpha_fold": {
+      "enabled": "${TN_ENABLE_PROTEOMICS_AF:-false}",
+      "model_preset": "multimer",
+      "max_complexes": 5,
+      "gpu_required": true,
+      "runner_binary": "${TN_ALPHAFOLD_RUNNER:-run_alphafold.sh}",
+      "data_dir": "${TN_ALPHAFOLD_DATA_DIR:-/data/alphafold}",
+      "job_queue_dir": "${TN_ALPHAFOLD_QUEUE_DIR:-05_artifacts/proteomics_validation/alphafold_jobs}",
+      "auto_run": "${TN_ALPHAFOLD_AUTORUN:-false}",
+      "fasta_dir": "${TN_PROTEOMICS_FASTA_DIR:-03_processed/proteomics/fasta}"
+    },
+    "ppi_prediction": {
+      "string_api_base": "https://string-db.org/api",
+      "string_min_confidence": 0.4,
+      "string_species": 9606,
+      "offline_cache_dir": "${TN_PROTEOMICS_CACHE:-projects/_shared_data/03_processed/external_evidence}",
+      "biogrid_dir": "${TN_PROTEOMICS_BIOGRID_DIR:-projects/_shared_data/01_sources/external/maia/biogrid.tab3}"
+    },
+    "pathway_analysis": {
+      "providers": [
+        {
+          "name": "reactome",
+          "min_fdr": 0.05
+        },
+        {
+          "name": "omnipath",
+          "min_score": 0.6
+        }
+      ],
+      "reactome_base": "https://reactome.org/AnalysisService",
+      "fallback_parquet": "${TN_PROTEOMICS_PATHWAY_PARQUET:-projects/_shared_data/03_processed/external_evidence/pathway_evidence.parquet}",
+      "ensembl_mapping": "${TN_PROTEOMICS_ENSEMBL_REACTOME:-projects/_shared_data/01_sources/external/Ensembl2Reactome_All_Levels.txt}"
+    },
+    "expression_profiling": {
+      "panels": [
+        "gtex",
+        "hpa"
+      ],
+      "focus_tissues": [
+        "thyroid",
+        "lung",
+        "peripheral_nerve"
+      ],
+      "gtex_expression_csv": "${TN_PROTEOMICS_GTEX_CSV:-projects/_shared_data/01_sources/external/maia/gtex_gene_tpm.gct.gz}",
+      "hpa_expression_csv": "${TN_PROTEOMICS_HPA_CSV:-projects/_shared_data/01_sources/external/rna_tissue_hpa.tsv.zip}",
+      "cache_dir": "${TN_PROTEOMICS_CACHE:-projects/_shared_data/03_processed/external_evidence}"
+    },
+    "experiment_design": {
+      "tcga_manifest": "${TN_PROTEOMICS_TCGA_MANIFEST:-projects/_shared_data/01_sources/external/maia/tcga_brca/tcga_brca_multiomics_manifest.csv}",
+      "open_targets_dir": "${TN_PROTEOMICS_OPEN_TARGETS_DIR:-projects/_shared_data/01_sources/external/maia/open_targets_data}"
+    },
+    "feature_flags": {
+      "alpha_fold": true,
+      "gpu_required": false
+    }
+  },
+  "inputs": {
+    "selection_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step9/portfolio_selected.csv",
+    "targets": [
+      "HDAC6"
+    ]
+  },
+  "artifacts": {
+    "ppi_summary_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/ppi_summary.json",
+    "pathway_enrichment_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/pathway_enrichment.json",
+    "expression_panel_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/expression_panel.json"
+  },
+  "metrics": {
+    "ppi_edges": 34,
+    "pathways_enriched": 0,
+    "expression_records": 0
+  },
+  "status": {
+    "state": "completed",
+    "warnings": [
+      "Clinical evidence unavailable: no_data",
+      "Reactome analysis token missing from response headers",
+      "AlphaFold enabled but FASTA directory missing; skipping structure prediction."
+    ],
+    "errors": []
+  },
+  "diagnostics": {
+    "tool_versions": {},
+    "api_usage": {
+      "string": {
+        "engine": "string",
+        "min_confidence": 0.4,
+        "species": 9606,
+        "api_calls": 0,
+        "warnings": [],
+        "biogrid_hits": 0
+      },
+      "reactome": {
+        "engine": "reactome",
+        "warnings": [
+          "Reactome analysis token missing from response headers"
+        ],
+        "cached": false
+      }
+    },
+    "environment": {
+      "gpu_available": false
+    },
+    "clinical": {
+      "status": "no_data",
+      "records_written": 0,
+      "gwas_genes": 0,
+      "clinvar_entries": 0,
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/\\_shared_data/03_processed/external_evidence/clinical_evidence.parquet"
+    },
+    "expression": {
+      "engine": "pandas",
+      "datasets_loaded": [],
+      "focus_tissues": [
+        "thyroid",
+        "lung",
+        "peripheral_nerve"
+      ],
+      "records": 0
+    },
+    "log_file": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/proteomics_validation.log"
+  }
+}

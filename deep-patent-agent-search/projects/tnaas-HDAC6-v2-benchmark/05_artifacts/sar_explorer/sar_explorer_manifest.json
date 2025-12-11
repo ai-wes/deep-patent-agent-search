@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "generated_at": "2025-12-10T18:46:31Z",
+  "config": {
+    "analog_generation": {
+      "enabled": true,
+      "max_analogs_per_seed": 60,
+      "candidate_filters": {
+        "min_qed": 0.35,
+        "max_mw": 550.0
+      },
+      "chemprop": {
+        "model_checkpoint": null,
+        "batch_size": 256,
+        "use_gpu": "${TN_SAR_USE_GPU:-true}"
+      }
+    },
+    "mmp_analysis": {
+      "enabled": true,
+      "min_delta_activity": 0.3,
+      "rdkit": {
+        "sanitize_strict": false
+      }
+    },
+    "property_optimization": {
+      "enabled": true,
+      "objectives": [
+        {
+          "name": "activity",
+          "maximize": true
+        },
+        {
+          "name": "qed",
+          "maximize": true
+        },
+        {
+          "name": "logp",
+          "maximize": false
+        }
+      ]
+    },
+    "selectivity_prediction": {
+      "enabled": "${TN_ENABLE_SAR_SELECTIVITY:-true}",
+      "kinome_model_path": null,
+      "report_top_n": 10
+    },
+    "synthesis_planning": {
+      "enabled": "${TN_ENABLE_SAR_SYNTHESIS:-true}",
+      "planner": "aizynth",
+      "max_routes_per_analog": 3,
+      "cost_estimator": "heuristic"
+    },
+    "feature_flags": {
+      "selectivity": true,
+      "synthesis": true
+    }
+  },
+  "inputs": {
+    "selection_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step9/portfolio_selected.csv"
+  },
+  "artifacts": {
+    "analog_library_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analogs.csv",
+    "analog_library_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analogs.json",
+    "property_pareto_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/property_pareto.csv",
+    "mmp_jump_table_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/mmp_jump_table.csv",
+    "selectivity_report_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/selectivity_report.json",
+    "synthesis_routes_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/synthesis_routes.json",
+    "property_scatter_png": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analog_property_scatter.png"
+  },
+  "metrics": {
+    "analogs_generated": 33,
+    "unique_parents": 1,
+    "pareto_front_size": 15,
+    "mmp_pairs": 33,
+    "selectivity_predictions": 33,
+    "synthesis_routes": 99,
+    "runtime_seconds": 0.18
+  },
+  "status": {
+    "state": "completed",
+    "warnings": [],
+    "errors": []
+  },
+  "diagnostics": {
+    "tool_versions": {},
+    "environment": {
+      "gpu_available": false
+    },
+    "log_file": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/sar_explorer.log"
+  }
+}

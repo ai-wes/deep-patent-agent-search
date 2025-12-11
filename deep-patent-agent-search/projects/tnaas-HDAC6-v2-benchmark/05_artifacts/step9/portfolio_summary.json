@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "chemspace_map": "/mnt/c/users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/chemspace/umap_training_vs_picks.png",
+    "chemspace_table": "/mnt/c/users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/chemspace/umap_training_vs_picks.csv"
+  },
+  "failure_entries": [
+    {
+      "rank": 1.0,
+      "index": 0,
+      "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+      "p_act": 0.0098268535980041,
+      "qed": 0.2125294655095647,
+      "composite_score": 0.2193,
+      "failed_agent_name": "Citarinostat",
+      "failed_agent_chembl_id": "CHEMBL105765",
+      "failed_agent_notes": NaN
+    }
+  ],
+  "uncertainty": {
+    "cp_epsilon": 0.1,
+    "cp_coverage": 0.9874686716791979,
+    "ece": 0.043667894297790444
+  },
+  "chemspace": {
+    "centroid_std": 0.00011419217298685377
+  },
+  "chart_summaries": {
+    "portfolio_plot": "AI summary disabled (no OpenAI client or OPENAI_API_KEY).",
+    "activity_qed": "AI summary disabled (no OpenAI client or OPENAI_API_KEY)."
+  }
+}

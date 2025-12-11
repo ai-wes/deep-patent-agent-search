@@ -1,0 +1,19 @@
+{
+  "n": 8,
+  "flagged": [
+    {
+      "row": 1,
+      "smiles": "O=c1[nH]nc(Cc2ccc(Br)nc2)c2c1CCCC2",
+      "alerts": [
+        "2-halo_pyridine"
+      ]
+    },
+    {
+      "row": 6,
+      "smiles": "CN(C)CCCOc1ccc(-c2nc3cccc4c3n2CCNC4=O)cc1",
+      "alerts": [
+        "Aliphatic_long_chain"
+      ]
+    }
+  ]
+}

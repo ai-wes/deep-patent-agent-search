@@ -1,0 +1,3 @@
+{"subj": "HDAC6_benchmark", "obj": "CompositeScore", "rel": "has_metric", "type": "score", "weight": 0.2193, "source": "portfolio_selected"}
+{"subj": "HDAC6_benchmark", "obj": "ADME_Solubility", "rel": "has_metric", "type": "adme", "weight": NaN, "source": "step9_adme_profile"}
+{"subj": "HDAC6_benchmark", "obj": "Safety_hERG", "rel": "has_metric", "type": "safety", "weight": 0.65, "source": "step9_toxicity_profile"}

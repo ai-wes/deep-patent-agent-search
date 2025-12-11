@@ -1,0 +1,2 @@
+Category,Risk,Target,Compound,Trigger,Impact,Mitigation,Gate,Owner,DueDate,Status
+Safety,hERG liability for HDAC6_benchmark (score=0.65),HDAC6,HDAC6_benchmark,In-vitro hERG probability ≥ 0.60,Potential cardiac liability; requires cardiac safety studies,Schedule hERG patch clamp follow-up and confirmatory assays,Preclinical toxicology,Cardiovascular Safety Lead,2026-01-09,Mitigation planned

@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0.0",
+  "run_metadata": {
+    "project_id": "tnaas-HDAC6-v2-benchmark",
+    "phase": "phase3",
+    "generated_at": "2025-12-10T18:44:47.507935Z",
+    "runner": "refactored_app_3",
+    "notes": [],
+    "git_commit": "498d7df2182ef91ee244d055b5a70a95d4b14d00"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/03_processed/step3/evidence_by_target.json",
+      "exists": false
+    },
+    {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/constraints.yaml",
+      "exists": true,
+      "size": 483,
+      "sha256": "69765410309328b5f803222bfa627cccdf15556757a953ea95764ee191492357"
+    }
+  ],
+  "outputs": {
+    "targets_ranked": {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/03_processed/targets_ranked.csv",
+      "exists": true,
+      "size": 445687,
+      "sha256": "889b304a40a13c0a95adb72e0d745da967aeb134473ebae0990a5bd0dfad86c8"
+    },
+    "target_features": {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/03_processed/target_features.parquet",
+      "exists": true,
+      "size": 65470,
+      "sha256": "855d89e45f1142e3d0d385bb6bc7a4fb839503d9b3fe2676b0752bb1d0aa9144"
+    }
+  },
+  "targets_ranked_preview": [
+    {
+      "target_id": "ENSG00000166949",
+      "composite": 0.6733333333333333,
+      "genetics": 1.0,
+      "expression": 1.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step6/xai/xai_ENSG00000166949.json"
+    },
+    {
+      "target_id": "ENSG00000184012",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step6/xai/xai_ENSG00000184012.json"
+    },
+    {
+      "target_id": "ENSG00000174775",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step6/xai/xai_ENSG00000174775.json"
+    },
+    {
+      "target_id": "ENSG00000047936",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step6/xai/xai_ENSG00000047936.json"
+    },
+    {
+      "target_id": "ENSG00000073803",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step6/xai/xai_ENSG00000073803.json"
+    },
+    {
+      "target_id": "ENSG00000079112",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000067842",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000111642",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000142867",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000143437",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000145675",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000073614",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000183337",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000128714",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000182578",
+      "composite": 0.5266666666666666,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.4666666666666667,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000119508",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000117713",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000118046",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000118058",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000120217",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000139687",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000180644",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000141736",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000146648",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    },
+    {
+      "target_id": "ENSG00000157764",
+      "composite": 0.5233333333333333,
+      "genetics": 1.0,
+      "expression": 0.0,
+      "centrality": 0.5333333333333333,
+      "tractability": 0.0,
+      "novelty": 1.0,
+      "risk_flags": "low_evidence_coverage",
+      "xai_json": NaN
+    }
+  ],
+  "target_symbols": [
+    "HDAC6"
+  ],
+  "indication": "Neurodegenerative diseases / cancer"
+}

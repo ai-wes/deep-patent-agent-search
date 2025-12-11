@@ -1,0 +1,39 @@
+{
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "invalid_smiles_pct": 0.0,
+  "duplicates_after_canon_pct": 0.0003755163349605708,
+  "unit_issues": [
+    "assays.assay_units.json:unrecognized_units_present",
+    "assays.assay_units.json:mixed_units_in_types:IC50"
+  ],
+  "unit_stats": [
+    {
+      "report": "assays.assay_units.json",
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+      "mixed_unit_fraction": 0.0006666666666666666,
+      "non_dominant_unit_count": 2,
+      "total_rows": 3000
+    }
+  ],
+  "gates": [
+    {
+      "name": "invalid_smiles_pct",
+      "value": 0.0,
+      "threshold": 0.2,
+      "pass": true
+    },
+    {
+      "name": "duplicates_after_canon_pct",
+      "value": 0.0004,
+      "threshold": 0.2,
+      "pass": true
+    },
+    {
+      "name": "assay_units_mixed",
+      "value": 0.0007,
+      "threshold": 0.02,
+      "pass": true
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,11 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+  "row_count": 3000,
+  "col_count": 12,
+  "n_dups": 1,
+  "issues": [
+    "duplicate_rows"
+  ],
+  "ok": true,
+  "error": null
+}

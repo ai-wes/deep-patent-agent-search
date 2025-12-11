@@ -1,0 +1,21 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+  "unit_col": "standard_units",
+  "type_col": "standard_type",
+  "unit_counts": {
+    "nm": 2998,
+    "10'8nm": 1,
+    "10'13nm": 1
+  },
+  "type_counts": {
+    "IC50": 2076,
+    "Ki": 795,
+    "Kd": 129
+  },
+  "ic50_nm_present": true,
+  "pIC50_present": true,
+  "temperature_col": null,
+  "ph_col": null,
+  "temperature_coverage_pct": 0.0,
+  "ph_coverage_pct": 0.0
+}

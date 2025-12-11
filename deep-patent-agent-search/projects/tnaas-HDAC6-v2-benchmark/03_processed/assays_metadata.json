@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "source_path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+  "n_rows_raw": 3000,
+  "n_rows_normalized": 2998,
+  "columns_detected": [
+    "assay_id",
+    "assay_organism",
+    "assay_type",
+    "compound_id",
+    "document_id",
+    "pchembl_value",
+    "standard_relation",
+    "standard_type",
+    "standard_units",
+    "standard_value",
+    "target_id",
+    "target_symbol"
+  ],
+  "unit_summary": {
+    "column": "standard_units",
+    "primary_unit": "nm",
+    "counts": {
+      "nm": 2998,
+      "10'8nm": 1,
+      "10'13nm": 1
+    },
+    "coverage_pct": 100.0
+  },
+  "type_summary": {
+    "column": "standard_type",
+    "primary_type": "IC50",
+    "counts": {
+      "IC50": 2076,
+      "Ki": 795,
+      "Kd": 129
+    },
+    "coverage_pct": 100.0
+  },
+  "temperature_c": {
+    "column": null,
+    "present": false,
+    "count": 0,
+    "coverage_pct": 0.0,
+    "mean": null,
+    "std": null,
+    "min": null,
+    "max": null
+  },
+  "ph": {
+    "column": null,
+    "present": false,
+    "count": 0,
+    "coverage_pct": 0.0,
+    "mean": null,
+    "std": null,
+    "min": null,
+    "max": null
+  }
+}

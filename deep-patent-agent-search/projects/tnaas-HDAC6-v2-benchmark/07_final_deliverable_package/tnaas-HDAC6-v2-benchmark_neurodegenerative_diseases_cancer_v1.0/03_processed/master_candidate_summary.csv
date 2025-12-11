@@ -1,0 +1,2 @@
+candidate_id,target_symbol,target_id,chembl_id,program_stage,regulatory_status,trial_count,evidence_total,overall_risk_level,risk_score,composite_score,market_size_current,market_size_year,market_size_5yr,market_growth_cagr
+HDAC6_benchmark,HDAC6,HDAC6,CHEMBL105765,clinical,Clinical,0,0,Medium,0.65,0.2193,,,,

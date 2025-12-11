@@ -1,0 +1,33 @@
+indication: Neurodegenerative diseases / cancer
+physchem:
+  ro5: true
+  mw:
+    min: null
+    max: 500.0
+  logp_max: 5.0
+  tpsa_max: 140.0
+  hbd_max: 5
+  hba_max: 10
+exclusions:
+  warheads: []
+  toxicophores: []
+  targets_blacklist: []
+assay:
+  required_controls:
+  - non-targeting
+  - vehicle
+  - positive_control
+  acceptance:
+    ic50_nm_max: 1000
+    replicate_cv_max: 0.3
+portfolio:
+  k_targets: 3
+  portfolio_k: 8
+gates:
+  required:
+  - S5
+  - S6
+  - S8
+  - S9
+  - S10
+  - S11

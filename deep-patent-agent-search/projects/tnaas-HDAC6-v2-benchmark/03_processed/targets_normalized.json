@@ -1,0 +1,33 @@
+[
+  {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    },
+    "provenance": {
+      "hgnc_source": "HGNC REST search by symbol",
+      "uniprot_source": null,
+      "chembl_source": null
+    }
+  }
+]

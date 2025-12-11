@@ -1,0 +1,16 @@
+{
+  "n": 8,
+  "ro5_pass_count": 8,
+  "ro5_pass_rate": 1.0,
+  "ro5_lenient_pass_rate": 1.0,
+  "kinase_dls_mean": 0.7866540487780009,
+  "kinase_dls_std": 0.11460785798189552,
+  "kinase_dls_pass_rate": 1.0,
+  "kinase_dls_threshold": 0.55,
+  "legacy_qed_mean": null,
+  "mw_mean": 323.3016250000001,
+  "notes": [
+    "Kinase Drug-Likeness Score (KDLS) replaces generic QED to reflect common kinase physico-chemical envelopes.",
+    "Lenient Rule-of-Five allows MW ≤ 600 and LogP ≤ 6; ~40% of approved kinase inhibitors exceed classic Ro5 limits."
+  ]
+}

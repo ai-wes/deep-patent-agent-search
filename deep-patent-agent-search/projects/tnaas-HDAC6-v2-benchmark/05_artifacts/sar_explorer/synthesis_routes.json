@@ -1,0 +1,893 @@
+[
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_0",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_0_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_0_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_0_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_1",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_1_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_1_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_1_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_2",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_2_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_2_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_2_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_3",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_3_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_3_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_3_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_4",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_4_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_4_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_4_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_5",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_5_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_5_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_5_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_6",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_6_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_6_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_6_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_7",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_7_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_7_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_7_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_8",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_8_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_8_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_8_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_9",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_9_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_9_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_9_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_10",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_10_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_10_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_F_10_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_11",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_11_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_11_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_11_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_12",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_12_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_12_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_12_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_13",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_13_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_13_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_13_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_14",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_14_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_14_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_14_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_15",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_15_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_15_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_15_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_16",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_16_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_16_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_16_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_17",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_17_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_17_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_17_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_18",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_18_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_18_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_18_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_19",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_19_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_19_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_19_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_20",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_20_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_20_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_20_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_21",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_21_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_21_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_halogenation_Cl_21_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_22",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_22_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_22_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_22_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_23",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_23_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_23_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_23_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_24",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_24_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_24_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_24_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_25",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_25_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_25_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_25_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_26",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_26_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_26_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_26_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_27",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_27_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_27_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_27_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_28",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_28_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_28_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_28_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_29",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_29_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_29_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_29_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_30",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_30_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_30_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_30_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_31",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_31_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_31_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_31_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_32",
+    "routes": [
+      {
+        "route_id": "HDAC6_benchmark_methoxy_32_route_1",
+        "steps": 3,
+        "cost_estimate_usd": 5000,
+        "confidence": 0.55
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_32_route_2",
+        "steps": 4,
+        "cost_estimate_usd": 6000,
+        "confidence": 0.5
+      },
+      {
+        "route_id": "HDAC6_benchmark_methoxy_32_route_3",
+        "steps": 5,
+        "cost_estimate_usd": 7000,
+        "confidence": 0.45000000000000007
+      }
+    ],
+    "metadata": {
+      "engine": "heuristic"
+    },
+    "parent_id": "HDAC6_benchmark"
+  }
+]

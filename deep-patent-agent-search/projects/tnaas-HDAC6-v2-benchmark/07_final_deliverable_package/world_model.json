@@ -1,0 +1,19 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "created_at": "2025-12-10T18:39:49.313605",
+    "agent_cycles": 0,
+    "description": "Kosmos-style world model with dual-channel evidence",
+    "updated_at": "2025-12-10T18:39:49.895821",
+    "update_log": [
+      {
+        "timestamp": "2025-12-10T18:39:49.895836",
+        "message": "Process shutdown flush",
+        "cycle": 0
+      }
+    ]
+  },
+  "nodes": [],
+  "links": []
+}

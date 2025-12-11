@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "run_metadata": {
+    "project_id": "tnaas-HDAC6-v2-benchmark",
+    "phase": "phase6",
+    "generated_at": "2025-12-10T18:46:44.074174Z",
+    "runner": "refactored_app_3",
+    "notes": [],
+    "seed": "1337",
+    "python_hash_seed": "1337",
+    "git_commit": "498d7df2182ef91ee244d055b5a70a95d4b14d00"
+  },
+  "inputs": [
+    {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/03_processed/targets_ranked.csv",
+      "exists": true,
+      "size": 147,
+      "sha256": "3df5745caf865d4d56f0c7553fe85b2ed427d0342b58b74c14b01a2f82dc7658"
+    },
+    {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step9/portfolio_selected.csv",
+      "exists": true,
+      "size": 6876,
+      "sha256": "d19405f81d27c35b7fe73c94983b8e322ce44f81295ad91402ba909e573647e8"
+    },
+    {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/constraints.yaml",
+      "exists": true,
+      "size": 483,
+      "sha256": "69765410309328b5f803222bfa627cccdf15556757a953ea95764ee191492357"
+    }
+  ],
+  "outputs": {
+    "action_items": {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/06_reports/action_items.csv",
+      "exists": true,
+      "size": 143,
+      "sha256": "a95dbf52accdbdd6a5c3108e76e64f97ab1e6d60a91257f852f276f388f320c6"
+    },
+    "procurement_packet": {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/06_reports/procurement_packet.zip",
+      "exists": true,
+      "size": 5229,
+      "sha256": "3157bd286c08eb9d544b83c396723d468ca2cc4c8b5598ba508759fb8faa6243"
+    },
+    "release_manifest": {
+      "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/06_reports/handoff/release.json",
+      "exists": true,
+      "size": 20712,
+      "sha256": "e9792e72788922041b47eb49214bfd602234969fef55768e3e269ba28de94e2f"
+    }
+  },
+  "summaries": {
+    "manifest_keys": [
+      "json",
+      "md",
+      "manifest"
+    ],
+    "preflight_ok": true
+  },
+  "previews": {
+    "action_items_head": [
+      {
+        "Action": "Approve assay manifest",
+        "Owner": "PO",
+        "Due": "2026-01-14",
+        "Status": "pending"
+      },
+      {
+        "Action": "Book CRO kickoff",
+        "Owner": "PO",
+        "Due": "2026-01-14",
+        "Status": "pending"
+      },
+      {
+        "Action": "Ship samples",
+        "Owner": "PO",
+        "Due": "2026-01-14",
+        "Status": "pending"
+      }
+    ]
+  }
+}

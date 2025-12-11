@@ -1,0 +1,497 @@
+[
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_0",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1F)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.9246000000000025,
+      "tpsa": 107.45,
+      "qed": 0.1538243926218215,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_1",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2F)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_2",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(F)c2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_3",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccc(F)cc2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_4",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(F)c2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_5",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2F)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_6",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2c(F)cccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_7",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2cc(F)ccc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_8",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccc(F)cc2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_9",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2cccc(F)c2Cl)nc1)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.924600000000003,
+      "tpsa": 107.45,
+      "qed": 0.20191143705401768,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_10",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1F)NO",
+    "transformation": "halogenation_F",
+    "properties": {
+      "mw": 485.9470000000001,
+      "logp": 4.9246000000000025,
+      "tpsa": 107.45,
+      "qed": 0.1538243926218215,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_11",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1Cl)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.4020000000001,
+      "logp": 5.438900000000004,
+      "tpsa": 107.45,
+      "qed": 0.1395681072300262,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_12",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2Cl)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000004,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_13",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(Cl)c2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000004,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_14",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccc(Cl)cc2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000004,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_15",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(Cl)c2)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000004,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_16",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2Cl)c2ccccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000004,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_17",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2c(Cl)cccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000016,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_18",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2cc(Cl)ccc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000016,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_19",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccc(Cl)cc2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000016,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_20",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2cccc(Cl)c2Cl)nc1)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.40200000000016,
+      "logp": 5.438900000000005,
+      "tpsa": 107.45,
+      "qed": 0.18319849418814577,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_21",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1Cl)NO",
+    "transformation": "halogenation_Cl",
+    "properties": {
+      "mw": 502.4020000000001,
+      "logp": 5.438900000000004,
+      "tpsa": 107.45,
+      "qed": 0.1395681072300262,
+      "hbd": 3.0,
+      "hba": 6.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_22",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1nc(N(c2ccccc2)c2ccccc2Cl)ncc1C(=O)NCCCCCCC(=O)NO",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000004,
+      "logp": 4.794100000000003,
+      "tpsa": 116.67999999999999,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_23",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1ccccc1N(c1ncc(C(=O)NCCCCCCC(=O)NO)cn1)c1ccccc1Cl",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000002,
+      "logp": 4.794100000000003,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_24",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1cccc(N(c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c2ccccc2Cl)c1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000002,
+      "logp": 4.794100000000004,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_25",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1ccc(N(c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c2ccccc2Cl)cc1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000002,
+      "logp": 4.794100000000004,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_26",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1cccc(N(c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c2ccccc2Cl)c1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000002,
+      "logp": 4.794100000000004,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_27",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1ccccc1N(c1ncc(C(=O)NCCCCCCC(=O)NO)cn1)c1ccccc1Cl",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000002,
+      "logp": 4.794100000000003,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_28",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1cccc(Cl)c1N(c1ccccc1)c1ncc(C(=O)NCCCCCCC(=O)NO)cn1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.98300000000035,
+      "logp": 4.794100000000003,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_29",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1ccc(Cl)c(N(c2ccccc2)c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000004,
+      "logp": 4.794100000000003,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_30",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1ccc(N(c2ccccc2)c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c(Cl)c1",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000003,
+      "logp": 4.794100000000002,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_31",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1cccc(N(c2ccccc2)c2ncc(C(=O)NCCCCCCC(=O)NO)cn2)c1Cl",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000004,
+      "logp": 4.794100000000002,
+      "tpsa": 116.68,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_32",
+    "parent_id": "HDAC6_benchmark",
+    "parent_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+    "smiles": "COc1nc(N(c2ccccc2)c2ccccc2Cl)ncc1C(=O)NCCCCCCC(=O)NO",
+    "transformation": "methoxy",
+    "properties": {
+      "mw": 497.9830000000004,
+      "logp": 4.794100000000003,
+      "tpsa": 116.67999999999999,
+      "qed": 0.18687807131693726,
+      "hbd": 3.0,
+      "hba": 7.0
+    }
+  }
+]

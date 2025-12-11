@@ -1,0 +1,253 @@
+{
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "targets": [
+    "HDAC6"
+  ],
+  "molecules": [
+    "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO"
+  ],
+  "plates": [
+    {
+      "name": "primary_1",
+      "type": "primary",
+      "replicates": 3,
+      "volume_ul": 10,
+      "controls": [
+        "non-targeting",
+        "vehicle",
+        "positive_control"
+      ],
+      "acceptance": {
+        "ic50_nm_max": 1000,
+        "replicate_cv_max": 0.3
+      }
+    }
+  ],
+  "assays": [
+    {
+      "name": "CHEMBL762476",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": ">",
+      "standard_units": "nM",
+      "standard_value": 5000.0
+    },
+    {
+      "name": "CHEMBL761608",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 3000.0
+    },
+    {
+      "name": "CHEMBL759581",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 3.0
+    },
+    {
+      "name": "CHEMBL761610",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 75.0
+    },
+    {
+      "name": "CHEMBL761787",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 8.0
+    },
+    {
+      "name": "CHEMBL763797",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 8.0
+    },
+    {
+      "name": "CHEMBL763796",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 3100.0
+    },
+    {
+      "name": "CHEMBL761789",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 6.0
+    },
+    {
+      "name": "CHEMBL761788",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 11.2
+    },
+    {
+      "name": "CHEMBL763795",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 350.0
+    },
+    {
+      "name": "CHEMBL761611",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 10.0
+    },
+    {
+      "name": "CHEMBL762473",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 44.0
+    },
+    {
+      "name": "CHEMBL763195",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 11.7
+    },
+    {
+      "name": "CHEMBL761609",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 42.0
+    },
+    {
+      "name": "CHEMBL833529",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 16.0
+    },
+    {
+      "name": "CHEMBL826331",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "Ki",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 105.0
+    },
+    {
+      "name": "CHEMBL828154",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": ">",
+      "standard_units": "nM",
+      "standard_value": 3000.0
+    },
+    {
+      "name": "CHEMBL829484",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 770.0
+    },
+    {
+      "name": "CHEMBL881278",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 23.0
+    },
+    {
+      "name": "CHEMBL859247",
+      "category": "B",
+      "target": "CHEMBL3105",
+      "plate": "primary",
+      "replicates": null,
+      "standard_type": "IC50",
+      "standard_relation": "=",
+      "standard_units": "nM",
+      "standard_value": 36.0
+    }
+  ],
+  "logistics": {
+    "sample_amount_mg_per_compound": 2.0,
+    "shipping_conditions": "ambient or cold-chain as required",
+    "turnaround_days": 14
+  }
+}

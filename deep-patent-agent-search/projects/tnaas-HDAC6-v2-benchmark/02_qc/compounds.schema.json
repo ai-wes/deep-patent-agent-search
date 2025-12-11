@@ -1,0 +1,17 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/compounds.csv",
+  "columns": [
+    "compound_id",
+    "smiles",
+    "preferred_name",
+    "max_phase",
+    "alogp",
+    "psa",
+    "hba",
+    "hbd",
+    "full_mwt"
+  ],
+  "col_count": 9,
+  "ok": true,
+  "error": null
+}

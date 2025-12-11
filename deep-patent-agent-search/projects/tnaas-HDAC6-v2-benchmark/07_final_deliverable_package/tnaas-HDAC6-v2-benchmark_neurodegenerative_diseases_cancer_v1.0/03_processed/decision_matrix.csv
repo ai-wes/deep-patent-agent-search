@@ -1,0 +1,2 @@
+candidate_id,target_symbol,smiles,p_act,qed,sa_score,mw,logp,tpsa,herg_cardiotoxicity,mutagenicity,cyp_inhibition_risk,composite_score,bbb_penetration,target_tractability_score,target_evidence_modalities,target_validation_pass,target_validation_recommendations,target_validation_pdb_structures,go_recommendation,program_stage,trial_count,evidence_total
+HDAC6_benchmark,HDAC6,O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO,0.0098268535980041,0.2125294655095647,0.9166666666666666,467.95700000000033,4.7855000000000025,107.45,0.65,,,0.2193,,,0,False,,0,Hold,clinical,0,0

@@ -1,0 +1,131 @@
+{
+  "target_id": "ENSG00000073803",
+  "feature_values": {
+    "genetics": 1.0,
+    "expression": 0.0,
+    "centrality": 0.4666666666666667,
+    "tractability": 0.0,
+    "novelty": 1.0,
+    "ip_crowding": 0.0,
+    "clinical": 0.0,
+    "lit_prior": 0.0,
+    "negatome_hits": 0
+  },
+  "contributions": {
+    "genetics": 0.35,
+    "expression": 0.0,
+    "centrality": 0.023333333333333334,
+    "tractability": 0.0,
+    "novelty": 0.15,
+    "ip_crowding": -0.0
+  },
+  "top_passages": {
+    "support": [
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000094",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000094 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000094",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000094 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000095",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000095 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000096",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000096 Association Score: 0 . 3039653988058105 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000094",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000094 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000095",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000095 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000096",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000096 Association Score: 0 . 3039653988058105 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000094",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000094 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000095",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000095 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000096",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000096 Association Score: 0 . 3039653988058105 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000095",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000095 Association Score: 0 . 4559480982087158 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000096",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000096 Association Score: 0 . 3039653988058105 Data Type: somatic_mutation Evidence Count: 1"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000073803/associations?disease=EFO_0000178",
+        "snippet": "Target ID: ENSG00000073803 Disease ID: EFO_0000178 Association Score: 0 . 607930797611621 Data Type: somatic_mutation Evidence Count: 1"
+      }
+    ],
+    "refute": []
+  }
+}

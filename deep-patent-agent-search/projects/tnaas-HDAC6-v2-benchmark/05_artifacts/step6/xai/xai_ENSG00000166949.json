@@ -1,0 +1,139 @@
+{
+  "target_id": "ENSG00000166949",
+  "feature_values": {
+    "genetics": 1.0,
+    "expression": 1.0,
+    "centrality": 0.5333333333333333,
+    "tractability": 0.0,
+    "novelty": 1.0,
+    "ip_crowding": 0.0,
+    "clinical": 0.0,
+    "lit_prior": 0.0,
+    "negatome_hits": 0
+  },
+  "contributions": {
+    "genetics": 0.35,
+    "expression": 0.15,
+    "centrality": 0.02666666666666667,
+    "tractability": 0.0,
+    "novelty": 0.15,
+    "ip_crowding": -0.0
+  },
+  "top_passages": {
+    "support": [
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_0050890",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_0050890 Association Score: 0 . 024317231904464845 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_0050890",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_0050890 Association Score: 0 . 024317231904464845 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_13406",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_13406 Association Score: 0 . 1094275435700918 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_7551",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_7551 Association Score: 0 . 057753425773104 Data Type: literature Evidence Count: 2"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_0050890",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_0050890 Association Score: 0 . 024317231904464845 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_13406",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_13406 Association Score: 0 . 1094275435700918 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_7551",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_7551 Association Score: 0 . 057753425773104 Data Type: literature Evidence Count: 2"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_0050890",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_0050890 Association Score: 0 . 024317231904464845 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_13406",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_13406 Association Score: 0 . 1094275435700918 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_7551",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_7551 Association Score: 0 . 057753425773104 Data Type: literature Evidence Count: 2"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_13406",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_13406 Association Score: 0 . 1094275435700918 Data Type: literature Evidence Count: 1"
+      },
+      {
+        "ev": 0.3852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=DOID_7551",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: DOID_7551 Association Score: 0 . 057753425773104 Data Type: literature Evidence Count: 2"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=EFO_0000095",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: EFO_0000095 Association Score: 0 . 09965020678426473 Data Type: rna_expression Evidence Count: 2"
+      },
+      {
+        "ev": 0.2852,
+        "section": "Body",
+        "year": 2025,
+        "venue": "OpenTargets Platform",
+        "url": "https://platform.opentargets.org/target/ENSG00000166949/associations?disease=EFO_0000096",
+        "snippet": "Target ID: ENSG00000166949 Disease ID: EFO_0000096 Association Score: 0 . 3039653988058105 Data Type: somatic_mutation Evidence Count: 1"
+      }
+    ],
+    "refute": []
+  }
+}

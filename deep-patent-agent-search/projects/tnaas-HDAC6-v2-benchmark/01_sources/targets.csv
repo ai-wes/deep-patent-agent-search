@@ -1,0 +1,2 @@
+target_id,symbol,name,uniprot,indication,modality,mechanism
+HDAC6,HDAC6,Benchmark: selective HDAC6 inhibitors,,Neurodegenerative diseases / cancer,Benchmark dataset,HDAC6 inhibitors: ricolinostat IC50 variable by cell line, citarinostat IC50 2.6nM (HDAC6); induces α-tubulin acetylation; synergistic with paclitaxel in breast cancer

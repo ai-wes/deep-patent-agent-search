@@ -1,0 +1,28 @@
+```json
+{
+  "boolean_core": "HDAC6 OR \"histone deacetylase 6\" OR Q9UBN7",
+  "synonyms": [
+    "HDAC6",
+    "histone deacetylase 6",
+    "Q9UBN7"
+  ],
+  "ipc_hints": [
+    "A61K 31/00",
+    "C07D",
+    "A61P 35/00",
+    "A61P 25/28"
+  ],
+  "narrowed": [
+    "(\"HDAC6\" OR \"histone deacetylase 6\") AND inhibitor",
+    "(\"HDAC6\" OR \"histone deacetylase 6\") AND (compound OR composition)",
+    "(\"HDAC6\" OR \"histone deacetylase 6\") AND (cancer OR \"multiple myeloma\" OR neurodegenerative)",
+    "(\"HDAC6\" OR \"histone deacetylase 6\") AND (treatment OR therapy OR modulator)"
+  ],
+  "negative_filters": [
+    "diagnostic",
+    "gene therapy",
+    "screening assay"
+  ],
+  "timespan_hint": "2005-2025"
+}
+```

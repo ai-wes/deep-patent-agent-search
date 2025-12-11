@@ -1,0 +1,15 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/targets.csv",
+  "columns": [
+    "target_id",
+    "symbol",
+    "name",
+    "uniprot",
+    "indication",
+    "modality",
+    "mechanism"
+  ],
+  "col_count": 7,
+  "ok": true,
+  "error": null
+}

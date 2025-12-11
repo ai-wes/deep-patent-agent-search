@@ -1,0 +1,321 @@
+{
+  "HD6": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "FLJ16239": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "PPP1R90": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "ENSG00000094631": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "10013": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "JM21": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "HGNC:14064": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "KIAA0901": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "KDAC6": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "{\"AGR\": \"HGNC:14064\", \"ALIAS_NAME\": [\"PROTEIN PHOSPHATASE 1, REGULATORY SUBUNIT 90\", \"ALPHA-TUBULIN DEACETYLASE HDAC6\"], \"ALIAS_SYMBOL\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"CCDS_ID\": [\"CCDS87740\", \"CCDS14306\"], \"DATE_APPROVED_RESERVED\": \"2000-11-28T00:00:00Z\", \"DATE_MODIFIED\": \"2023-09-21T00:00:00Z\", \"ENA\": [\"AF132609\"], \"ENSEMBL_GENE_ID\": \"ENSG00000094631\", \"ENTREZ_ID\": \"10013\", \"GENCC\": \"HGNC:14064\", \"GENE_GROUP\": [\"RING FINGER PROTEINS\", \"PROTEIN PHOSPHATASE 1 REGULATORY SUBUNITS\", \"HISTONE DEACETYLASES, CLASS IIB\"], \"GENE_GROUP_ID\": [58, 694, 993], \"HGNC_ID\": \"HGNC:14064\", \"IUPHAR\": \"HGNC:14064\", \"LOCATION\": \"XP11.23\", \"LOCATION_SORTABLE\": \"XP11.23\", \"LOCUS_GROUP\": \"PROTEIN-CODING GENE\", \"LOCUS_TYPE\": \"GENE WITH PROTEIN PRODUCT\", \"LSDB\": [\"GLOBAL VARIOME SHARED LOVD|HTTPS://DATABASES.LOVD.NL/SHARED/GENES/HDAC6\"], \"MANE_SELECT\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"MGD_ID\": [\"MGI:1333752\"], \"NAME\": \"HISTONE DEACETYLASE 6\", \"OMIM_ID\": [\"300272\"], \"ORPHANET\": 248481, \"PUBMED_ID\": [10220385, 10048485, 12024216], \"REFSEQ_ACCESSION\": [\"NM_006044\"], \"RGD_ID\": [\"RGD:619981\"], \"STATUS\": \"APPROVED\", \"SYMBOL\": \"HDAC6\", \"UCSC_ID\": \"UC004DKS.2\", \"UNIPROT_IDS\": [\"Q9UBN7\"], \"UUID\": \"9E1481BF-535A-4F4E-A2D3-D7642443C6AB\", \"VEGA_ID\": \"OTTHUMG00000034496\"}": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  },
+  "HDAC6": {
+    "preferred_symbol": "HDAC6",
+    "preferred_name": "histone deacetylase 6",
+    "species_taxid": null,
+    "species_name": null,
+    "target_type": null,
+    "hgnc_id": "HGNC:14064",
+    "hgnc_symbol": "HDAC6",
+    "ncbi_gene_id": "10013",
+    "ensembl_gene_id": "ENSG00000094631",
+    "uniprot_accession": null,
+    "chembl_target_id": null,
+    "synonyms": [
+      "FLJ16239",
+      "HD6",
+      "JM21",
+      "KDAC6",
+      "KIAA0901",
+      "PPP1R90"
+    ],
+    "xrefs": {
+      "hgnc_raw": [
+        "{\"agr\": \"HGNC:14064\", \"alias_name\": [\"protein phosphatase 1, regulatory subunit 90\", \"alpha-tubulin deacetylase HDAC6\"], \"alias_symbol\": [\"KIAA0901\", \"JM21\", \"HD6\", \"FLJ16239\", \"PPP1R90\", \"KDAC6\"], \"ccds_id\": [\"CCDS87740\", \"CCDS14306\"], \"date_approved_reserved\": \"2000-11-28T00:00:00Z\", \"date_modified\": \"2023-09-21T00:00:00Z\", \"ena\": [\"AF132609\"], \"ensembl_gene_id\": \"ENSG00000094631\", \"entrez_id\": \"10013\", \"gencc\": \"HGNC:14064\", \"gene_group\": [\"Ring finger proteins\", \"Protein phosphatase 1 regulatory subunits\", \"Histone deacetylases, class IIB\"], \"gene_group_id\": [58, 694, 993], \"hgnc_id\": \"HGNC:14064\", \"iuphar\": \"HGNC:14064\", \"location\": \"Xp11.23\", \"location_sortable\": \"Xp11.23\", \"locus_group\": \"protein-coding gene\", \"locus_type\": \"gene with protein product\", \"lsdb\": [\"Global Variome shared LOVD|https://databases.lovd.nl/shared/genes/HDAC6\"], \"mane_select\": [\"ENST00000334136.11\", \"NM_006044.4\"], \"mgd_id\": [\"MGI:1333752\"], \"name\": \"histone deacetylase 6\", \"omim_id\": [\"300272\"], \"orphanet\": 248481, \"pubmed_id\": [10220385, 10048485, 12024216], \"refseq_accession\": [\"NM_006044\"], \"rgd_id\": [\"RGD:619981\"], \"status\": \"Approved\", \"symbol\": \"HDAC6\", \"ucsc_id\": \"uc004dks.2\", \"uniprot_ids\": [\"Q9UBN7\"], \"uuid\": \"9e1481bf-535a-4f4e-a2d3-d7642443c6ab\", \"vega_id\": \"OTTHUMG00000034496\"}"
+      ],
+      "hint_symbol": [
+        "HDAC6"
+      ]
+    }
+  }
+}

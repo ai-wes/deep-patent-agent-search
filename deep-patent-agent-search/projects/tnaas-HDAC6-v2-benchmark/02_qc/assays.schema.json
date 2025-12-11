@@ -1,0 +1,20 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+  "columns": [
+    "compound_id",
+    "target_id",
+    "target_symbol",
+    "standard_type",
+    "standard_relation",
+    "standard_value",
+    "standard_units",
+    "assay_id",
+    "document_id",
+    "assay_organism",
+    "assay_type",
+    "pchembl_value"
+  ],
+  "col_count": 12,
+  "ok": true,
+  "error": null
+}

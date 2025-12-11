@@ -1,0 +1,13 @@
+{
+  "enforce": false,
+  "thresholds": {
+    "ece_max": 0.05,
+    "cp_cover_min": 0.9,
+    "ad_min_dist": 0.35
+  },
+  "ece": 0.043667894297790444,
+  "cp_coverage": 0.9874686716791979,
+  "cp_epsilon": 0.1,
+  "ad_pass_all": false,
+  "pass": false
+}

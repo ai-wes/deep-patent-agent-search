@@ -1,0 +1,29 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/assays.csv",
+  "value_col": "standard_value",
+  "unit_col": "standard_units",
+  "type_col": "standard_type",
+  "unit_counts": {
+    "nm": 2998,
+    "10'8nm": 1,
+    "10'13nm": 1
+  },
+  "type_counts": {
+    "IC50": 2076,
+    "Ki": 795,
+    "Kd": 129
+  },
+  "mixed_types": [
+    "IC50"
+  ],
+  "total_rows": 3000,
+  "dominant_unit": "nm",
+  "dominant_unit_fraction": 0.9993333333333333,
+  "non_dominant_unit_count": 2,
+  "mixed_unit_fraction": 0.0006666666666666666,
+  "issues": [
+    "unrecognized_units_present",
+    "mixed_units_in_types:IC50"
+  ],
+  "suggestions": []
+}

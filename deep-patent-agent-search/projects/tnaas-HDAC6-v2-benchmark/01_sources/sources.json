@@ -1,0 +1,29 @@
+{
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "target": {
+    "symbol": "HDAC6",
+    "name": "HDAC6",
+    "uniprot": "Q9UBN7",
+    "organism": "Homo sapiens"
+  },
+  "indication": "Cancer (Multiple Myeloma); Mechanism relevant for Neurodegeneration",
+  "mechanism_of_action": "Benchmark: selective HDAC6 inhibitors",
+  "modality": "Benchmark dataset",
+  "context_of_use": "benchmark",
+  "known_risks": "This is a synthetic benchmark placeholder; integrate real evidence before deployment.",
+  "evidence_positive": [
+    "HDAC6 inhibitors: ricolinostat IC50 variable by cell line, citarinostat IC50 2.6nM (HDAC6); induces \u03b1-tubulin acetylation; synergistic with paclitaxel in breast cancer"
+  ],
+  "evidence_negative": [],
+  "retrieved_at": "2025-11-10T09:42:46.973750+00:00",
+  "truth_row": {
+    "dg_expected_min_kcal": "-9.5",
+    "dg_expected_max_kcal": "-7.0",
+    "bbb_expected_band": "pass",
+    "cns_mpo_expected_min": "1.0",
+    "herg_expected_band": "watch",
+    "cyp_expected_band": "watch",
+    "dili_expected_band": "pass",
+    "pdb_expected_min": "3"
+  }
+}

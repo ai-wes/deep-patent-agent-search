@@ -1,0 +1,7 @@
+{
+  "captured": "2025-12-10T18:46:40.454501Z",
+  "env": {
+    "CONDA_PREFIX": "/root/miniconda3/envs/gbtar",
+    "PYTHONPATH": "src"
+  }
+}

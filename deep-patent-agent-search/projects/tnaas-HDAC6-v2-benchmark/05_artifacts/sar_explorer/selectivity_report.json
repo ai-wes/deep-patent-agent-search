@@ -1,0 +1,266 @@
+[
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_0",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_1",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_2",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_3",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_4",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_5",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_6",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_7",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_8",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_9",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_F_10",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.6000000000000001,
+    "risk_band": "low",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_11",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_12",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_13",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_14",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_15",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_16",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_17",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_18",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_19",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_20",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_halogenation_Cl_21",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_22",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_23",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_24",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_25",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_26",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_27",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_28",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_29",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_30",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_31",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  },
+  {
+    "analog_id": "HDAC6_benchmark_methoxy_32",
+    "panel": "kinome_stub",
+    "off_target": "RET",
+    "selectivity_score": 0.4,
+    "risk_band": "medium",
+    "parent_id": "HDAC6_benchmark"
+  }
+]

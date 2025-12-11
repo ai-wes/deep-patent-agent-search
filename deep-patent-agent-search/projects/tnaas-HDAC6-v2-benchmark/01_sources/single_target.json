@@ -1,0 +1,32 @@
+{
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+  "molecule_name": "Citarinostat",
+  "candidate_id": "HDAC6_benchmark",
+  "compound_type": "benchmark_reference",
+  "chembl_id": "CHEMBL105765",
+  "target_symbol": "HDAC6",
+  "target_id": "HDAC6",
+  "target_uniprot_id": "",
+  "indication": "Neurodegenerative diseases / cancer",
+  "source_label": "benchmark",
+  "phases": [],
+  "calibration_profile": "transcription_epigenetic_v2025q4",
+  "program_family": "HDAC6",
+  "label_group": "holdout",
+  "label_binary": null,
+  "label_timestamp": "2025-11-10",
+  "missingness_flags": {
+    "dg_expected_kcal_min": 0,
+    "dg_expected_kcal_max": 0,
+    "bbb_expected_band": 0,
+    "cns_mpo_expected_min": 0,
+    "herg_expected_band": 0,
+    "cyp_expected_band": 0,
+    "dili_expected_band": 0,
+    "pdb_expected_min": 0,
+    "evidence_expected_modalities_min": 0,
+    "smiles": 0,
+    "drug_name": 0
+  }
+}

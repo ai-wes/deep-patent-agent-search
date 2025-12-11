@@ -1,0 +1,20 @@
+{
+  "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/01_sources/compounds.csv",
+  "total": 2663,
+  "canonical_ok": 2653,
+  "stereo_count": 142,
+  "salts_removed": 23,
+  "duplicates_after_canonical": 1,
+  "bad_examples": [
+    "strip:CS(=O)(=O)O.Oc1nc2ccc(N3CCNCC3)nc2c2ccccc12",
+    "strip:CN1C[C@H]2C[C@@H]1CN2c1ccc2nc(O)c3ccccc3c2n1.CS(=O)(=O)O",
+    "strip:CS(=O)(=O)O.Oc1nc2ccc(N3CCN(CC4CC4)CC3)nc2c2ccccc12",
+    "strip:O=C(O)C(F)(F)F.Oc1nc2ccc(N3C[C@H]4C[C@@H]3CN4)nc2c2ccccc12",
+    "strip:CN(CC(=O)O)CC(=O)c1ccc2[nH]c3c4c(c5c(c3c2c1)C(=O)NC5=O)CCC4.O=C(O)C(F)(F)F",
+    "strip:O=C(CN1CCC[C@H]1C(=O)O)c1ccc2[nH]c3c4c(c5c(c3c2c1)C(=O)NC5=O)CCC4.O=C(O)C(F)(F)F",
+    "strip:NC(CCCc1nc(-c2ccc3[nH]c4c5c(c6c(c4c3c2)C(=O)NC6=O)CCC5)cs1)C(=O)O.O=C(O)C(F)(F)F",
+    "strip:CS(=O)(=O)O.O=S(=O)(NCCN1CCCCC1)c1ccc2nc(O)c3ccccc3c2c1",
+    "strip:CN(C)C1CCN(c2ccc3nc(O)c4ccccc4c3n2)CC1.CS(=O)(=O)O",
+    "strip:O=C(O)C(F)(F)F.Oc1nc2c(c3ccccc13)CCNC2"
+  ]
+}

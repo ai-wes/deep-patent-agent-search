@@ -1,0 +1,1854 @@
+{
+  "project_id": "tnaas-HDAC6-v2-benchmark",
+  "generated_at": "2025-12-10T18:46:13.839880+00:00",
+  "modules": {
+    "sar_explorer": {
+      "manifest": {
+        "schema_version": "1.0.0",
+        "project_id": "tnaas-HDAC6-v2-benchmark",
+        "generated_at": "2025-12-10T18:46:13Z",
+        "config": {
+          "analog_generation": {
+            "enabled": true,
+            "max_analogs_per_seed": 60,
+            "candidate_filters": {
+              "min_qed": 0.35,
+              "max_mw": 550.0
+            },
+            "chemprop": {
+              "model_checkpoint": null,
+              "batch_size": 256,
+              "use_gpu": "${TN_SAR_USE_GPU:-true}"
+            }
+          },
+          "mmp_analysis": {
+            "enabled": true,
+            "min_delta_activity": 0.3,
+            "rdkit": {
+              "sanitize_strict": false
+            }
+          },
+          "property_optimization": {
+            "enabled": true,
+            "objectives": [
+              {
+                "name": "activity",
+                "maximize": true
+              },
+              {
+                "name": "qed",
+                "maximize": true
+              },
+              {
+                "name": "logp",
+                "maximize": false
+              }
+            ]
+          },
+          "selectivity_prediction": {
+            "enabled": "${TN_ENABLE_SAR_SELECTIVITY:-true}",
+            "kinome_model_path": null,
+            "report_top_n": 10
+          },
+          "synthesis_planning": {
+            "enabled": "${TN_ENABLE_SAR_SYNTHESIS:-true}",
+            "planner": "aizynth",
+            "max_routes_per_analog": 3,
+            "cost_estimator": "heuristic"
+          },
+          "feature_flags": {
+            "selectivity": true,
+            "synthesis": true
+          }
+        },
+        "inputs": {
+          "selection_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step9/portfolio_selected.csv"
+        },
+        "artifacts": {
+          "analog_library_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analogs.csv",
+          "analog_library_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analogs.json",
+          "property_pareto_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/property_pareto.csv",
+          "mmp_jump_table_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/mmp_jump_table.csv",
+          "selectivity_report_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/selectivity_report.json",
+          "synthesis_routes_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/synthesis_routes.json",
+          "property_scatter_png": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/analog_property_scatter.png"
+        },
+        "metrics": {
+          "analogs_generated": 33,
+          "unique_parents": 1,
+          "pareto_front_size": 15,
+          "mmp_pairs": 33,
+          "selectivity_predictions": 33,
+          "synthesis_routes": 99,
+          "runtime_seconds": 0.21
+        },
+        "status": {
+          "state": "completed",
+          "warnings": [],
+          "errors": []
+        },
+        "diagnostics": {
+          "tool_versions": {},
+          "environment": {
+            "gpu_available": false
+          },
+          "log_file": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/sar_explorer.log"
+        }
+      },
+      "manifest_path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/sar_explorer/sar_explorer_manifest.json"
+    },
+    "orchestrator_v4": {
+      "metadata": {
+        "generated_at": "2025-12-10T18:46:14.085509",
+        "project_id": "tnaas-HDAC6-v2-benchmark",
+        "target_gene": "HDAC6",
+        "target_pdb_id": null,
+        "candidate_smiles_present": true,
+        "project_config": {
+          "id": "unknown",
+          "name": "Unknown Project",
+          "mode": "non_covalent",
+          "family": null,
+          "chem_space_class": "Ro5_oral",
+          "is_cns_project": false,
+          "covalent": {},
+          "selectivity_panel": {}
+        },
+        "completed_at": "2025-12-10T18:46:25.304007"
+      },
+      "disease_seeds": {
+        "target_symbol": "HDAC6",
+        "disease_seeds": [
+          "BRCA2",
+          "KIT",
+          "TP53",
+          "BRCA1",
+          "APC"
+        ],
+        "source": "OpenTargets",
+        "timestamp": "2025-12-10T10:46:20.132049"
+      },
+      "spectral_analysis": {
+        "relevance_score": 0.6237578670888192
+      },
+      "kinase_drug_likeness": {
+        "score": 0.9897454665873388
+      },
+      "cns_penetration": {
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "bbb_permeability_probability": 0.07920791953802109,
+        "bbb_classification": "Low BBB penetration",
+        "bbb_score": 0.4752475172281265,
+        "cns_mpo": {
+          "cns_mpo_score": 1.3955452380952358,
+          "mw_score": 0.22887857142856904,
+          "logp_score": 0.0,
+          "hbd_score": 0.16666666666666663,
+          "tpsa_score": 0.0,
+          "interpretation": "Unfavorable"
+        },
+        "descriptors": {
+          "MW": 467.95700000000033,
+          "LogP": 3.134,
+          "LogP_raw": 4.7855000000000025,
+          "TPSA": 137.54,
+          "TPSA_raw": 107.45,
+          "HBD": 3,
+          "HBA": 6,
+          "RotBonds": 11,
+          "AromaticRings": 3,
+          "MolRefractivity": 127.07240000000007,
+          "FractionCsp3": null,
+          "BertzCT": 0.0,
+          "Chi0v": 18.83273803016041,
+          "NumHeteroatoms": 9
+        },
+        "bbb_consensus": {
+          "band": "fail",
+          "reasons": [
+            "TPSA>137.5",
+            "CNS_MPO<1.40",
+            "DISAGREEMENT"
+          ],
+          "meta": {
+            "tpsa": 137.54,
+            "cns_mpo": 1.3955452380952358,
+            "logp": 3.134
+          }
+        },
+        "bbb_band": "low",
+        "qc_bbb_consensus": "low"
+      },
+      "admet_predictions": {
+        "candidate_id": "CAND_001",
+        "target_symbol": "HDAC6",
+        "target_id": "HDAC6",
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "molecular_weight": 467.95700000000033,
+        "logp": 4.7855000000000025,
+        "tpsa": 107.45,
+        "hbd": 3.0,
+        "hba": 6.0,
+        "rotb": 11.0,
+        "solubility": -3.5478789806365967,
+        "bbb_permeability": 0.07920791953802109,
+        "bbb_permeability_prob": 0.07920791953802109,
+        "bbb_permeability_class": 0,
+        "cyp_substrate": 0.26213592290878296,
+        "cyp_substrate_prob": 0.26213592290878296,
+        "cyp_substrate_class": 0,
+        "cyp_inhibitor": 0.28717949986457825,
+        "cyp_inhibitor_prob": 0.28717949986457825,
+        "cyp_inhibitor_class": 0,
+        "herg_risk": 3.2353334426879883,
+        "mutagenicity": 0.09090909361839294,
+        "mutagenicity_prob": 0.09090909361839294,
+        "mutagenicity_class": 1,
+        "cytotoxicity": 0.5981077551841736,
+        "cytotoxicity_prob": 0.5981077551841736,
+        "cytotoxicity_class": 0,
+        "BBB": 0.625,
+        "BBB_prob": 0.625,
+        "BBB_class": 1,
+        "Cardiotoxicity1": 0.20000000298023224,
+        "Cardiotoxicity1_prob": 0.20000000298023224,
+        "Cardiotoxicity1_class": 0,
+        "Cardiotoxicity10": 0.41860464215278625,
+        "Cardiotoxicity10_prob": 0.41860464215278625,
+        "Cardiotoxicity10_class": 0,
+        "Cardiotoxicity5": 0.25,
+        "Cardiotoxicity5_prob": 0.25,
+        "Cardiotoxicity5_class": 0,
+        "CL": 0.7236841917037964,
+        "CL_prob": 0.7236841917037964,
+        "CL_class": 1,
+        "CYP1A2": 0.11872146278619766,
+        "CYP1A2_prob": 0.11872146278619766,
+        "CYP1A2_class": 0,
+        "CYP2C19": 0.6022727489471436,
+        "CYP2C19_prob": 0.6022727489471436,
+        "CYP2C19_class": 1,
+        "CYP2C9": 0.7142857313156128,
+        "CYP2C9_prob": 0.7142857313156128,
+        "CYP2C9_class": 1,
+        "CYP2D6": 0.6666666865348816,
+        "CYP2D6_prob": 0.6666666865348816,
+        "CYP2D6_class": 1,
+        "CYP3A4": 0.5909090638160706,
+        "CYP3A4_prob": 0.5909090638160706,
+        "CYP3A4_class": 1,
+        "ESOL": -5.702964782714844,
+        "half-life": 0.24242424964904785,
+        "half-life_prob": 0.24242424964904785,
+        "half-life_class": 0,
+        "Hepatotoxicity": 0.7821011543273926,
+        "Hepatotoxicity_prob": 0.7821011543273926,
+        "Hepatotoxicity_class": 1,
+        "HIA": 0.9292570352554321,
+        "HIA_prob": 0.9292570352554321,
+        "HIA_class": 1,
+        "logD": 2.6389987468719482,
+        "OB": 0.9347826242446899,
+        "OB_prob": 0.9347826242446899,
+        "OB_class": 1,
+        "p-gp inhibitor": 0.8666666746139526,
+        "p-gp inhibitor_prob": 0.8666666746139526,
+        "p-gp inhibitor_class": 1,
+        "p-gp substrates": 0.6666666865348816,
+        "p-gp substrates_prob": 0.6666666865348816,
+        "p-gp substrates_class": 1,
+        "Respiratory toxicity": 0.35555556416511536,
+        "Respiratory toxicity_prob": 0.35555556416511536,
+        "Respiratory toxicity_class": 0,
+        "solubility_logs": -3.5478789806365967,
+        "solubility_confidence": [
+          -4.047878980636597,
+          -3.0478789806365967
+        ],
+        "bbb_class": "Low",
+        "cyp3a4_inhibitor_probability": 0.28717949986457825,
+        "cyp3a4_mechanism": "non-inhibitor",
+        "cyp3a4_substrate_probability": 0.26213592290878296,
+        "structural_alert_labels": [
+          "Cytotoxic",
+          "hERG Risk"
+        ],
+        "overall_risk_score": 0.5
+      },
+      "uncertainty_quantification": {
+        "status": "SKIPPED",
+        "reason": "solubility training data missing required columns ('smiles', 'solubility')"
+      },
+      "toxicity_profile": {
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "herg_cardiotoxicity": 0.198,
+        "herg_details": {
+          "score": 0.198,
+          "confidence_interval": {
+            "lower": 0.0,
+            "upper": 1.0
+          },
+          "drivers": [],
+          "method": "Hybrid QSAR (Out of Domain)",
+          "uncertainty": 0.477,
+          "applicability_similarity": 0.203
+        },
+        "mutagenicity": 0.109,
+        "mutagenicity_details": {
+          "score": 0.109,
+          "confidence_interval": {
+            "lower": 0.0,
+            "upper": 0.646
+          },
+          "drivers": [],
+          "method": "Hybrid QSAR (Out of Domain)",
+          "uncertainty": 0.274,
+          "applicability_similarity": 0.185
+        },
+        "hepatotoxicity": 0.125,
+        "hepatotoxicity_details": {
+          "score": 0.125,
+          "confidence_interval": {
+            "lower": 0.0,
+            "upper": 0.968
+          },
+          "drivers": [],
+          "method": "Hybrid QSAR (Out of Domain)",
+          "uncertainty": 0.43,
+          "applicability_similarity": 0.176
+        },
+        "cytotoxicity": 0.139,
+        "cytotoxicity_details": {
+          "score": 0.139,
+          "confidence_interval": {
+            "lower": 0.0,
+            "upper": 0.926
+          },
+          "drivers": [],
+          "method": "Hybrid QSAR (Out of Domain)",
+          "uncertainty": 0.402,
+          "applicability_similarity": 0.185
+        },
+        "structural_alerts": 0,
+        "structural_alert_labels": [],
+        "model_status": "QSAR_Available"
+      },
+      "cyp_assessment": {
+        "solubility": -3.5478789806365967,
+        "bbb_permeability": 0.07920791953802109,
+        "bbb_permeability_prob": 0.07920791953802109,
+        "bbb_permeability_class": 0,
+        "cyp_substrate": 0.7142857313156128,
+        "cyp_substrate_prob": 0.26213592290878296,
+        "cyp_substrate_class": 1,
+        "cyp_inhibitor": 0.28717949986457825,
+        "cyp_inhibitor_prob": 0.28717949986457825,
+        "cyp_inhibitor_class": 0,
+        "herg_risk": 3.2353334426879883,
+        "mutagenicity": 0.09090909361839294,
+        "mutagenicity_prob": 0.09090909361839294,
+        "mutagenicity_class": 1,
+        "cytotoxicity": 0.5981077551841736,
+        "cytotoxicity_prob": 0.5981077551841736,
+        "cytotoxicity_class": 0,
+        "BBB": 0.625,
+        "BBB_prob": 0.625,
+        "BBB_class": 1,
+        "Cardiotoxicity1": 0.20000000298023224,
+        "Cardiotoxicity1_prob": 0.20000000298023224,
+        "Cardiotoxicity1_class": 0,
+        "Cardiotoxicity10": 0.41860464215278625,
+        "Cardiotoxicity10_prob": 0.41860464215278625,
+        "Cardiotoxicity10_class": 0,
+        "Cardiotoxicity5": 0.25,
+        "Cardiotoxicity5_prob": 0.25,
+        "Cardiotoxicity5_class": 0,
+        "CL": 0.7236841917037964,
+        "CL_prob": 0.7236841917037964,
+        "CL_class": 1,
+        "CYP1A2": 0.11872146278619766,
+        "CYP1A2_prob": 0.11872146278619766,
+        "CYP1A2_class": 0,
+        "CYP2C19": 0.6022727489471436,
+        "CYP2C19_prob": 0.6022727489471436,
+        "CYP2C19_class": 1,
+        "CYP2C9": 0.7142857313156128,
+        "CYP2C9_prob": 0.7142857313156128,
+        "CYP2C9_class": 1,
+        "CYP2D6": 0.6666666865348816,
+        "CYP2D6_prob": 0.6666666865348816,
+        "CYP2D6_class": 1,
+        "CYP3A4": 0.5909090638160706,
+        "CYP3A4_prob": 0.5909090638160706,
+        "CYP3A4_class": 1,
+        "ESOL": -5.702964782714844,
+        "half-life": 0.24242424964904785,
+        "half-life_prob": 0.24242424964904785,
+        "half-life_class": 0,
+        "Hepatotoxicity": 0.7821011543273926,
+        "Hepatotoxicity_prob": 0.7821011543273926,
+        "Hepatotoxicity_class": 1,
+        "HIA": 0.9292570352554321,
+        "HIA_prob": 0.9292570352554321,
+        "HIA_class": 1,
+        "logD": 2.6389987468719482,
+        "OB": 0.9347826242446899,
+        "OB_prob": 0.9347826242446899,
+        "OB_class": 1,
+        "p-gp inhibitor": 0.8666666746139526,
+        "p-gp inhibitor_prob": 0.8666666746139526,
+        "p-gp inhibitor_class": 1,
+        "p-gp substrates": 0.6666666865348816,
+        "p-gp substrates_prob": 0.6666666865348816,
+        "p-gp substrates_class": 1,
+        "Respiratory toxicity": 0.35555556416511536,
+        "Respiratory toxicity_prob": 0.35555556416511536,
+        "Respiratory toxicity_class": 0,
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "solubility_logs": -3.5478789806365967,
+        "solubility_confidence": [
+          -4.047878980636597,
+          -3.0478789806365967
+        ],
+        "bbb_class": "Low",
+        "cyp3a4_inhibitor_probability": 0.28717949986457825,
+        "cyp3a4_mechanism": "non-inhibitor",
+        "cyp3a4_substrate_probability": 0.26213592290878296,
+        "structural_alert_labels": [
+          "Cytotoxic",
+          "hERG Risk"
+        ],
+        "overall_risk_score": 0.5,
+        "primary_cyp_substrate": "CYP2C9",
+        "primary_cyp_inhibitor": "CYP3A4"
+      },
+      "gcn_toxicity": {
+        "toxicity_probability": 0.3743951618671417
+      },
+      "pbpk_sensitivity": {
+        "auc": 6.530080795288086,
+        "c_max": 0.3998138904571533,
+        "sensitivity_logp": -4.7720441818237305
+      },
+      "mcts_optimization": {
+        "optimized_smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "qed": 0.21252946550956472,
+        "status": "success",
+        "score": 0.3341446537019973
+      },
+      "causal_discovery": {
+        "n_nodes": 8,
+        "n_edges": 27,
+        "density": 0.9642857142857143,
+        "degrees": {
+          "ESOL predicted log solubility in mols per litre": 7,
+          "Minimum Degree": 7,
+          "Molecular Weight": 7,
+          "Number of H-Bond Donors": 7,
+          "Number of Rings": 7,
+          "Number of Rotatable Bonds": 6,
+          "Polar Surface Area": 7,
+          "measured log solubility in mols per litre": 6
+        },
+        "alpha_threshold": 0.05,
+        "sample_size": 1128
+      },
+      "manufacturability_audit": {
+        "synthetic_accessibility": {
+          "score": 1.3163992621130618,
+          "complexity_class": "Low",
+          "strategic_fragments": 7,
+          "fragment_smiles": [
+            "[16*]c1ccccc1Cl",
+            "[1*]C([6*])=O",
+            "[5*]N([5*])[5*]"
+          ]
+        },
+        "solid_state": {
+          "planarity_pbf": 0.925947006719355,
+          "predicted_tm_c": 273.58620868599996,
+          "lattice_energy_kcal": 62.69622070999413,
+          "polymorphism_risk": "Medium",
+          "packing_efficiency": "Low"
+        }
+      },
+      "metabolite_prediction": {
+        "input": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "flags": {
+          "aniline": true,
+          "aldehyde": false,
+          "isocyanate": false,
+          "epoxide": false,
+          "quinone": false,
+          "michael_acceptor": false,
+          "nitroso": false,
+          "nitro_aromatic": false,
+          "hydrazine": false,
+          "thiophene": false
+        },
+        "metabolites": [
+          {
+            "method": "qsar_rules",
+            "transformation": "aromatic_hydroxylation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccc(O)cc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aromatic_hydroxylation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(O)c2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aromatic_hydroxylation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2O)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aromatic_hydroxylation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2c(O)cccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aromatic_hydroxylation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2cc(O)ccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aliphatic_hydroxylation",
+            "smiles": "O=C(CCCCCC(O)NC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aliphatic_hydroxylation",
+            "smiles": "O=C(CCCCC(O)CNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aliphatic_hydroxylation",
+            "smiles": "O=C(CCCC(O)CCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aliphatic_hydroxylation",
+            "smiles": "O=C(CCC(O)CCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "aliphatic_hydroxylation",
+            "smiles": "O=C(CC(O)CCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "n_oxidation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc([N+]([O-])(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "dehalogenation",
+            "smiles": "[H]c1ccccc1N(c1ccccc1)c1ncc(C(=O)NCCCCCCC(=O)NO)cn1",
+            "confidence": 0.3,
+            "notes": "Phase I, rule-based",
+            "phase": "phase_i",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "glucuronidation_oh",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NOC1OC(CO)C(O)C(O)C1O",
+            "confidence": 0.48,
+            "notes": "Phase II, rule-based",
+            "phase": "phase_ii",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "glucuronidation_nh",
+            "smiles": "O=C(CCCCCCN(C(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)C1OC(CO)C(O)C(O)C1O)NO",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "phase": "phase_ii",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "glucuronidation_nh",
+            "smiles": "O=C(NCCCCCCC(=O)N(O)C1OC(CO)C(O)C(O)C1O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "phase": "phase_ii",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "sulfation",
+            "smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NOS(=O)(=O)[O-]",
+            "confidence": 0.48,
+            "notes": "Phase II, rule-based",
+            "phase": "phase_ii",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          },
+          {
+            "method": "qsar_rules",
+            "transformation": "methylation",
+            "smiles": "CONC(=O)CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "phase": "phase_ii",
+            "stability": "moderate",
+            "risk_level": "medium",
+            "reactive_groups": [
+              "aniline"
+            ]
+          }
+        ],
+        "source": "qsar_rules",
+        "summary": {
+          "total_metabolites": 17,
+          "phase_i_count": 12,
+          "phase_ii_count": 5,
+          "high_risk_count": 0,
+          "reactive_metabolites": 17
+        }
+      },
+      "offtarget_screening": {
+        "herg": {
+          "target": "hERG",
+          "method": "heuristic",
+          "n_ref": 0,
+          "max_sim": 0.0,
+          "mean_top5": 0.0,
+          "sea_score": 0.0,
+          "risk": "high",
+          "rationale": "basic=True, logP=4.8, MW=468, arom=3",
+          "top_refs": []
+        },
+        "5ht2b": {
+          "target": "5-HT2B",
+          "method": "heuristic",
+          "n_ref": 0,
+          "max_sim": 0.0,
+          "mean_top5": 0.0,
+          "sea_score": 0.0,
+          "risk": "high",
+          "rationale": "basic=True, arom=3, logP=4.8, TPSA=107",
+          "top_refs": []
+        },
+        "maob": {
+          "target": "MAO-B",
+          "method": "heuristic",
+          "n_ref": 0,
+          "max_sim": 0.0,
+          "mean_top5": 0.0,
+          "sea_score": 0.0,
+          "risk": "low",
+          "rationale": "no common MAO-B motif",
+          "top_refs": []
+        }
+      },
+      "quantum_target_audit": {
+        "status": "NOT_RUN",
+        "reason": "Missing dependencies: QuantumTargetAudit",
+        "target_gene": "HDAC6",
+        "candidate_smiles_present": true
+      },
+      "solubility_assessment": {
+        "logS": -5.4338347636363675,
+        "molecular_weight": 467.95700000000033,
+        "mg_per_mL": 0.0017233408573239916,
+        "solubility_bin": "insoluble",
+        "rationale": "logS=-5.43 mol/L, MW=468.0 g/mol, => 0.00 mg/mL"
+      },
+      "y_scramble_validation": {
+        "status": "SKIPPED",
+        "reason": "Insufficient data for Y-scramble (need >= 10 compounds and >=2 classes) across portfolio_selected.csv and 01_sources/compounds.csv"
+      },
+      "solvation_thermodynamics": {
+        "status": "SKIPPED",
+        "reason": "No PDB files available"
+      },
+      "dynamics_nma": {
+        "status": "SKIPPED",
+        "reason": "No PDB files available"
+      },
+      "evolutionary_trace": {
+        "status": "SKIPPED",
+        "reason": "Missing required data: target sequence, pocket indices"
+      },
+      "synthesis_audit": {
+        "status": "SUCCESS",
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "method": "SCScore_Proxy",
+        "synthetic_complexity_score": 5.0,
+        "is_manufacturable": false
+      },
+      "interaction_stability": {
+        "status": "SKIPPED",
+        "reason": "Missing required files: MD trajectory file (md_traj.dcd), PDB file"
+      },
+      "mechanistic_generic": {
+        "status": "SKIPPED",
+        "reason": "mechanistic_builder not imported",
+        "project_id": "tnaas-HDAC6-v2-benchmark",
+        "target_gene": "HDAC6"
+      },
+      "virtual_panels": {
+        "virtual_dili_panel": [
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "herg_risk": "high",
+            "cyp_inhibition_risk": 0.0,
+            "mutagenicity": "-",
+            "clearance_risk": "medium",
+            "esol_logS": -5.433834763636366,
+            "logp": 4.7855000000000025,
+            "pains_hits": "",
+            "dili_class": "High",
+            "dili_score": 4.5,
+            "risk_drivers": "hERG high risk; Medium clearance risk; logP >= 4; Aqueous solubility <= -5",
+            "recommendation": "Trigger full DILI workup (in vitro hepatocytes + mechanistic assays).",
+            "action_pack": "Required: bile acid transporter inhibition (BSEP/MRP2) and bile canaliculi integrity assays. Required: reactive metabolite trapping plus mitochondrial toxicity profiling. Required: time-dependent CYP inhibition and covalent binding evaluation. Required: repeat-dose rodent study with enhanced liver histopathology and serum biomarkers (ALT/AST, GLDH, K18). Gate: advancement requires dual-negative across proximal DILI mechanisms or SAR-driven mitigation with retest.",
+            "qc_metadata": null,
+            "module_id": null,
+            "run_id": null,
+            "target_uid": null,
+            "assay_uid": null,
+            "compound_uid": null
+          }
+        ],
+        "virtual_cyp_tdi_panel": [
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "smiles": null,
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "cyp_inhibition_risk": 0.0,
+            "cyp_class": "Low",
+            "clearance_risk": "medium",
+            "metab_n": 17,
+            "tdi_class": "High",
+            "tdi_score": 3,
+            "risk_drivers": "Moderate clearance risk; High metabolite count (>=6)",
+            "recommendation": "Evaluate TDI risk with mechanistic assays and adjust chemistry immediately.",
+            "qc_metadata": null,
+            "module_id": null,
+            "run_id": null,
+            "target_uid": null,
+            "assay_uid": null,
+            "compound_uid": null
+          }
+        ],
+        "metabolic_hotspots": [
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aromatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1O)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 1,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aromatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2O)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 2,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aromatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2cccc(O)c2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 3,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aromatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccc(O)cc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 4,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aromatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2c(O)cccc2Cl)nc1)NO",
+            "confidence": 0.5,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 5,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aliphatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(NCCCCCC(O)C(=O)NO)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 6,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aliphatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CC(O)CCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 7,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aliphatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCC(O)CCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 8,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aliphatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCC(O)CCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 9,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "aliphatic_hydroxylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCC(O)CNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 10,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "n_oxidation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc([N+]([O-])(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "confidence": 0.4,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 11,
+            "reactive_flag": "Yes",
+            "recommendation": "Prioritise med-chem tactic to mitigate reactive metabolite formation."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "dehalogenation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "[H]c1ccccc1N(c1ccccc1)c1ncc(C(=O)NCCCCCCC(=O)NO)cn1",
+            "confidence": 0.3,
+            "notes": "Phase I, rule-based",
+            "hotspot_rank": 12,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "glucuronidation_oh",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NOC1OC(CO)C(O)C(O)C1O",
+            "confidence": 0.48,
+            "notes": "Phase II, rule-based",
+            "hotspot_rank": 13,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "glucuronidation_nh",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCN(C(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)C1OC(CO)C(O)C(O)C1O)NO",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "hotspot_rank": 14,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "glucuronidation_nh",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(NCCCCCCC(=O)N(O)C1OC(CO)C(O)C(O)C1O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "hotspot_rank": 15,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "sulfation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NOS(=O)(=O)[O-]",
+            "confidence": 0.48,
+            "notes": "Phase II, rule-based",
+            "hotspot_rank": 16,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          },
+          {
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6",
+            "transformation": "methylation",
+            "method": "qsar_rules",
+            "metabolite_smiles": "CONC(=O)CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1",
+            "confidence": 0.4,
+            "notes": "Phase II, rule-based",
+            "hotspot_rank": 17,
+            "reactive_flag": "No",
+            "recommendation": "Monitor via follow-up metabolic assays."
+          }
+        ],
+        "microstate_annotations": [
+          {
+            "input_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "microstate_smiles": "O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO",
+            "formal_charge": 0,
+            "protomer_state": "protonated",
+            "pka_estimate": 9.65,
+            "dominant_fraction": 0.9944080326911652,
+            "logp": 4.7855000000000025,
+            "tpsa": 107.45,
+            "hbd": 3,
+            "hba": 6,
+            "candidate_id": "HDAC6_benchmark",
+            "target_id": "HDAC6",
+            "target_symbol": "HDAC6"
+          }
+        ]
+      },
+      "mechanistic_extensions": {
+        "spec_version": "0.2.0",
+        "generated_from": "combined_unified_computational_outputs",
+        "matrix_rows": [
+          {
+            "component": "BBB permeability",
+            "pipeline_result": "Low BBB penetration",
+            "literature_benchmark": null,
+            "accuracy_assessment": null,
+            "mechanistic_prior": "Low (TPSA 107.45; LogP 4.79; CNS_MPO n/a)",
+            "orthogonal_evidence": "AF2 pocket scan + MD stability pending (status:not_run)",
+            "cp_alpha": null,
+            "evidence_tier": "A",
+            "assay_gate": null,
+            "confidence_verdict": "Low",
+            "reason_code": "TPSA>80"
+          },
+          {
+            "component": "Solubility",
+            "pipeline_result": "logS -5.43",
+            "literature_benchmark": null,
+            "accuracy_assessment": null,
+            "mechanistic_prior": "Low (logS -5.43)",
+            "orthogonal_evidence": "AF2 pocket scan + MD stability pending (status:not_run)",
+            "cp_alpha": null,
+            "evidence_tier": "A",
+            "assay_gate": null,
+            "confidence_verdict": "Low",
+            "reason_code": "logS=-5.43"
+          },
+          {
+            "component": "CYP DDI",
+            "pipeline_result": "risk=None",
+            "literature_benchmark": null,
+            "accuracy_assessment": null,
+            "mechanistic_prior": "Unknown (risk_score n/a, mechanism unknown)",
+            "orthogonal_evidence": "AF2 pocket scan + MD stability pending (status:not_run)",
+            "cp_alpha": null,
+            "evidence_tier": "A",
+            "assay_gate": null,
+            "confidence_verdict": "Unknown",
+            "reason_code": "missing_probs, mechanism=unknown"
+          },
+          {
+            "component": "hERG risk",
+            "pipeline_result": "n/a",
+            "literature_benchmark": null,
+            "accuracy_assessment": null,
+            "mechanistic_prior": "Low (hERG risk n/a)",
+            "orthogonal_evidence": "AF2 pocket scan + MD stability pending (status:not_run)",
+            "cp_alpha": null,
+            "evidence_tier": "A",
+            "assay_gate": null,
+            "confidence_verdict": "Low",
+            "reason_code": "LogP<=1 || TPSA>=100"
+          },
+          {
+            "component": "DILI risk",
+            "pipeline_result": "derived_from_cyp_solubility",
+            "literature_benchmark": null,
+            "accuracy_assessment": null,
+            "mechanistic_prior": "Low (derived_from_cyp_solubility)",
+            "orthogonal_evidence": "AF2 pocket scan + MD stability pending (status:not_run)",
+            "cp_alpha": null,
+            "evidence_tier": "A",
+            "assay_gate": null,
+            "confidence_verdict": "Low",
+            "reason_code": "derived_from_cyp_solubility"
+          }
+        ],
+        "compounds": [
+          {
+            "candidate_id": "CAND_001",
+            "target_id": null,
+            "mechanistic_prior": {
+              "bbb": {
+                "verdict": "Low",
+                "reasons": [
+                  "TPSA>80"
+                ],
+                "summary": "TPSA 107.45; LogP 4.79; CNS_MPO n/a"
+              },
+              "solubility": {
+                "verdict": "Low",
+                "reasons": [
+                  "logS=-5.43"
+                ],
+                "summary": "logS -5.43"
+              },
+              "cyp": {
+                "verdict": "Unknown",
+                "reasons": [
+                  "missing_probs",
+                  "mechanism=unknown"
+                ],
+                "summary": "risk_score n/a, mechanism unknown"
+              },
+              "herg": {
+                "verdict": "Low",
+                "reasons": [
+                  "LogP<=1 || TPSA>=100"
+                ],
+                "summary": "hERG risk n/a"
+              },
+              "dili": {
+                "verdict": "Low",
+                "reasons": [
+                  "derived_from_cyp_solubility"
+                ],
+                "summary": "derived_from_cyp_solubility"
+              }
+            },
+            "orthogonal_checks": {
+              "af2_pockets": "not_run",
+              "md_permeation": "not_run",
+              "probe_md": "not_run"
+            },
+            "evidence_ladder": {
+              "tier": "A"
+            },
+            "assay_gates": [],
+            "confidence": {
+              "bbb": "Low",
+              "solubility": "Low",
+              "cyp": "Unknown",
+              "herg": "Low",
+              "dili": "Low"
+            },
+            "decision": {
+              "go_nogo": "GO",
+              "assay_count": 0
+            }
+          }
+        ],
+        "targets": [
+          {
+            "target_id": "TGT_001",
+            "target_symbol": "HDAC6",
+            "druggability_mechanistic": {
+              "af2": {
+                "status": "not_run"
+              },
+              "pocket_scan": {
+                "status": "not_run",
+                "tools": [
+                  "Fpocket",
+                  "DoGSiteScorer",
+                  "SiteMap"
+                ],
+                "report_fields": [
+                  "pocket_volume",
+                  "hydropathy",
+                  "enclosure",
+                  "score"
+                ]
+              },
+              "cryptic_pocket": {
+                "status": "not_run"
+              },
+              "disorder_filter": {
+                "status": "not_run"
+              },
+              "prior": "Unknown",
+              "consensus": "Unknown",
+              "tier": "A"
+            },
+            "selectivity_mechanistic": {
+              "nearest_homologs": [],
+              "status": "not_run",
+              "ddg_expected": "\u2265 1.0 kcal/mol target\u2013nearest homolog after pose survival",
+              "assay_gate": "Thermal shift/SPR across homologs if advancing"
+            }
+          }
+        ]
+      },
+      "qc_summary": {
+        "status": "ok",
+        "issues": [],
+        "chem_space_penalty": 0.14275000000000126
+      },
+      "candidate_data": {
+        "candidate_id": "CAND_001",
+        "compound_uid": "CAND_001",
+        "target_uid": "TGT_001",
+        "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+        "descriptors": {
+          "MW": 467.95700000000033,
+          "LogP": 4.7855000000000025,
+          "TPSA": 107.45
+        },
+        "adme": {
+          "bbb_permeability": {
+            "probability": 0.07920791953802109,
+            "classification": "Low BBB penetration",
+            "band": "low"
+          },
+          "solubility": {
+            "logS": -5.4338347636363675,
+            "molecular_weight": 467.95700000000033,
+            "mg_per_mL": 0.0017233408573239916,
+            "solubility_bin": "insoluble",
+            "rationale": "logS=-5.43 mol/L, MW=468.0 g/mol, => 0.00 mg/mL"
+          },
+          "cyp": {
+            "solubility": -3.5478789806365967,
+            "bbb_permeability": 0.07920791953802109,
+            "bbb_permeability_prob": 0.07920791953802109,
+            "bbb_permeability_class": 0,
+            "cyp_substrate": 0.7142857313156128,
+            "cyp_substrate_prob": 0.26213592290878296,
+            "cyp_substrate_class": 1,
+            "cyp_inhibitor": 0.28717949986457825,
+            "cyp_inhibitor_prob": 0.28717949986457825,
+            "cyp_inhibitor_class": 0,
+            "herg_risk": 3.2353334426879883,
+            "mutagenicity": 0.09090909361839294,
+            "mutagenicity_prob": 0.09090909361839294,
+            "mutagenicity_class": 1,
+            "cytotoxicity": 0.5981077551841736,
+            "cytotoxicity_prob": 0.5981077551841736,
+            "cytotoxicity_class": 0,
+            "BBB": 0.625,
+            "BBB_prob": 0.625,
+            "BBB_class": 1,
+            "Cardiotoxicity1": 0.20000000298023224,
+            "Cardiotoxicity1_prob": 0.20000000298023224,
+            "Cardiotoxicity1_class": 0,
+            "Cardiotoxicity10": 0.41860464215278625,
+            "Cardiotoxicity10_prob": 0.41860464215278625,
+            "Cardiotoxicity10_class": 0,
+            "Cardiotoxicity5": 0.25,
+            "Cardiotoxicity5_prob": 0.25,
+            "Cardiotoxicity5_class": 0,
+            "CL": 0.7236841917037964,
+            "CL_prob": 0.7236841917037964,
+            "CL_class": 1,
+            "CYP1A2": 0.11872146278619766,
+            "CYP1A2_prob": 0.11872146278619766,
+            "CYP1A2_class": 0,
+            "CYP2C19": 0.6022727489471436,
+            "CYP2C19_prob": 0.6022727489471436,
+            "CYP2C19_class": 1,
+            "CYP2C9": 0.7142857313156128,
+            "CYP2C9_prob": 0.7142857313156128,
+            "CYP2C9_class": 1,
+            "CYP2D6": 0.6666666865348816,
+            "CYP2D6_prob": 0.6666666865348816,
+            "CYP2D6_class": 1,
+            "CYP3A4": 0.5909090638160706,
+            "CYP3A4_prob": 0.5909090638160706,
+            "CYP3A4_class": 1,
+            "ESOL": -5.702964782714844,
+            "half-life": 0.24242424964904785,
+            "half-life_prob": 0.24242424964904785,
+            "half-life_class": 0,
+            "Hepatotoxicity": 0.7821011543273926,
+            "Hepatotoxicity_prob": 0.7821011543273926,
+            "Hepatotoxicity_class": 1,
+            "HIA": 0.9292570352554321,
+            "HIA_prob": 0.9292570352554321,
+            "HIA_class": 1,
+            "logD": 2.6389987468719482,
+            "OB": 0.9347826242446899,
+            "OB_prob": 0.9347826242446899,
+            "OB_class": 1,
+            "p-gp inhibitor": 0.8666666746139526,
+            "p-gp inhibitor_prob": 0.8666666746139526,
+            "p-gp inhibitor_class": 1,
+            "p-gp substrates": 0.6666666865348816,
+            "p-gp substrates_prob": 0.6666666865348816,
+            "p-gp substrates_class": 1,
+            "Respiratory toxicity": 0.35555556416511536,
+            "Respiratory toxicity_prob": 0.35555556416511536,
+            "Respiratory toxicity_class": 0,
+            "smiles": "C1=CC=C(C=C1)N(C2=CC=CC=C2Cl)C3=NC=C(C=N3)C(=O)NCCCCCCC(=O)NO",
+            "solubility_logs": -3.5478789806365967,
+            "solubility_confidence": [
+              -4.047878980636597,
+              -3.0478789806365967
+            ],
+            "bbb_class": "Low",
+            "cyp3a4_inhibitor_probability": 0.28717949986457825,
+            "cyp3a4_mechanism": "non-inhibitor",
+            "cyp3a4_substrate_probability": 0.26213592290878296,
+            "structural_alert_labels": [
+              "Cytotoxic",
+              "hERG Risk"
+            ],
+            "overall_risk_score": 0.5,
+            "primary_cyp_substrate": "CYP2C9",
+            "primary_cyp_inhibitor": "CYP3A4"
+          }
+        },
+        "toxicity": {
+          "herg": {
+            "risk": "high"
+          }
+        },
+        "metabolism": {
+          "risk_flags": {
+            "aniline": true,
+            "aldehyde": false,
+            "isocyanate": false,
+            "epoxide": false,
+            "quinone": false,
+            "michael_acceptor": false,
+            "nitroso": false,
+            "nitro_aromatic": false,
+            "hydrazine": false,
+            "thiophene": false
+          },
+          "total_metabolites": 17,
+          "phase_i_count": 12,
+          "phase_ii_count": 5,
+          "high_risk_metabolites": 0,
+          "reactive_metabolites": 17,
+          "source": "qsar_rules",
+          "artifact_ref": "metabolite_prediction"
+        },
+        "safety": {
+          "offtarget_summary": {
+            "herg_risk": "high",
+            "htr2b_risk": "high",
+            "maob_risk": "low",
+            "high_risk_targets": 2,
+            "medium_risk_targets": 0,
+            "any_high_risk_offtargets": true
+          },
+          "artifact_ref": "offtarget_screening"
+        },
+        "qc_chem_space_penalty": 0.14275000000000126,
+        "qc_issues": [],
+        "qc_status": "ok",
+        "qc_metadata": {
+          "project_id": "unknown",
+          "chem_space_class": "Ro5_oral",
+          "mode": "non_covalent",
+          "is_cns_project": false
+        }
+      },
+      "execution_summary": {
+        "calculations_run": [
+          "spectral_analysis",
+          "kinase_drug_likeness",
+          "cns_penetration",
+          "toxicity_profile",
+          "cyp_assessment",
+          "gcn_toxicity",
+          "pbpk_sensitivity",
+          "mcts_optimization",
+          "causal_discovery",
+          "mechanistic_extensions",
+          "manufacturability_audit",
+          "metabolite_prediction",
+          "offtarget_screening",
+          "solubility_assessment",
+          "virtual_panels",
+          "synthesis_audit"
+        ],
+        "calculations_skipped": [
+          "uncertainty_quantification",
+          "physics_binding",
+          "molecular_docking",
+          "molecular_dynamics",
+          "y_scramble_validation",
+          "quantum_target_audit",
+          "solvation_thermodynamics",
+          "dynamics_nma",
+          "evolutionary_trace",
+          "interaction_stability",
+          "mechanistic_pathway_influence",
+          "mechanistic_qc",
+          "mechanistic_generic",
+          "mechanistic_pathway_engine",
+          "mechanistic_pkpd_engine"
+        ],
+        "calculations_failed": [],
+        "calculations_stubbed": []
+      }
+    },
+    "proteomics_validation": {
+      "manifest": {
+        "schema_version": "1.0.0",
+        "project_id": "tnaas-HDAC6-v2-benchmark",
+        "generated_at": "2025-12-10T18:46:25Z",
+        "config": {
+          "alpha_fold": {
+            "enabled": "${TN_ENABLE_PROTEOMICS_AF:-false}",
+            "model_preset": "multimer",
+            "max_complexes": 5,
+            "gpu_required": true,
+            "runner_binary": "${TN_ALPHAFOLD_RUNNER:-run_alphafold.sh}",
+            "data_dir": "${TN_ALPHAFOLD_DATA_DIR:-/data/alphafold}",
+            "job_queue_dir": "${TN_ALPHAFOLD_QUEUE_DIR:-05_artifacts/proteomics_validation/alphafold_jobs}",
+            "auto_run": "${TN_ALPHAFOLD_AUTORUN:-false}",
+            "fasta_dir": "${TN_PROTEOMICS_FASTA_DIR:-03_processed/proteomics/fasta}"
+          },
+          "ppi_prediction": {
+            "string_api_base": "https://string-db.org/api",
+            "string_min_confidence": 0.4,
+            "string_species": 9606,
+            "offline_cache_dir": "${TN_PROTEOMICS_CACHE:-projects/_shared_data/03_processed/external_evidence}",
+            "biogrid_dir": "${TN_PROTEOMICS_BIOGRID_DIR:-projects/_shared_data/01_sources/external/maia/biogrid.tab3}"
+          },
+          "pathway_analysis": {
+            "providers": [
+              {
+                "name": "reactome",
+                "min_fdr": 0.05
+              },
+              {
+                "name": "omnipath",
+                "min_score": 0.6
+              }
+            ],
+            "reactome_base": "https://reactome.org/AnalysisService",
+            "fallback_parquet": "${TN_PROTEOMICS_PATHWAY_PARQUET:-projects/_shared_data/03_processed/external_evidence/pathway_evidence.parquet}",
+            "ensembl_mapping": "${TN_PROTEOMICS_ENSEMBL_REACTOME:-projects/_shared_data/01_sources/external/Ensembl2Reactome_All_Levels.txt}"
+          },
+          "expression_profiling": {
+            "panels": [
+              "gtex",
+              "hpa"
+            ],
+            "focus_tissues": [
+              "thyroid",
+              "lung",
+              "peripheral_nerve"
+            ],
+            "gtex_expression_csv": "${TN_PROTEOMICS_GTEX_CSV:-projects/_shared_data/01_sources/external/maia/gtex_gene_tpm.gct.gz}",
+            "hpa_expression_csv": "${TN_PROTEOMICS_HPA_CSV:-projects/_shared_data/01_sources/external/rna_tissue_hpa.tsv.zip}",
+            "cache_dir": "${TN_PROTEOMICS_CACHE:-projects/_shared_data/03_processed/external_evidence}"
+          },
+          "experiment_design": {
+            "tcga_manifest": "${TN_PROTEOMICS_TCGA_MANIFEST:-projects/_shared_data/01_sources/external/maia/tcga_brca/tcga_brca_multiomics_manifest.csv}",
+            "open_targets_dir": "${TN_PROTEOMICS_OPEN_TARGETS_DIR:-projects/_shared_data/01_sources/external/maia/open_targets_data}"
+          },
+          "feature_flags": {
+            "alpha_fold": true,
+            "gpu_required": false
+          }
+        },
+        "inputs": {
+          "selection_csv": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/step9/portfolio_selected.csv",
+          "targets": [
+            "HDAC6"
+          ]
+        },
+        "artifacts": {
+          "ppi_summary_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/ppi_summary.json",
+          "pathway_enrichment_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/pathway_enrichment.json",
+          "expression_panel_json": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/expression_panel.json"
+        },
+        "metrics": {
+          "ppi_edges": 34,
+          "pathways_enriched": 0,
+          "expression_records": 0
+        },
+        "status": {
+          "state": "completed",
+          "warnings": [
+            "Clinical evidence unavailable: no_data",
+            "Reactome analysis token missing from response headers",
+            "AlphaFold enabled but FASTA directory missing; skipping structure prediction."
+          ],
+          "errors": []
+        },
+        "diagnostics": {
+          "tool_versions": {},
+          "api_usage": {
+            "string": {
+              "engine": "string",
+              "min_confidence": 0.4,
+              "species": 9606,
+              "api_calls": 0,
+              "warnings": [],
+              "biogrid_hits": 0
+            },
+            "reactome": {
+              "engine": "reactome",
+              "warnings": [
+                "Reactome analysis token missing from response headers"
+              ],
+              "cached": false
+            }
+          },
+          "environment": {
+            "gpu_available": false
+          },
+          "clinical": {
+            "status": "no_data",
+            "records_written": 0,
+            "gwas_genes": 0,
+            "clinvar_entries": 0,
+            "path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/\\_shared_data/03_processed/external_evidence/clinical_evidence.parquet"
+          },
+          "expression": {
+            "engine": "pandas",
+            "datasets_loaded": [],
+            "focus_tissues": [
+              "thyroid",
+              "lung",
+              "peripheral_nerve"
+            ],
+            "records": 0
+          },
+          "log_file": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/proteomics_validation.log"
+        }
+      },
+      "manifest_path": "/mnt/c/Users/wes/desktop/target_credit_b/projects/tnaas-HDAC6-v2-benchmark/05_artifacts/proteomics_validation/proteomics_manifest.json"
+    }
+  },
+  "metrics": [
+    {
+      "metric_id": "pbpk_auc",
+      "group": "pharmacology",
+      "module_id": "orch_v3_pbpk",
+      "module_label": "Differentiable PBPK",
+      "metric_label": "Simulated AUC (50mg)",
+      "unit": "mg*h/L",
+      "value": 6.53,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Neural ODE",
+      "proof_tier": "-",
+      "notes": "Systemic exposure"
+    },
+    {
+      "metric_id": "pbpk_logp_gradient",
+      "group": "pharmacology",
+      "module_id": "orch_v3_pbpk",
+      "module_label": "Differentiable PBPK",
+      "metric_label": "LogP Sensitivity",
+      "unit": "dAUC/dLogP",
+      "value": -4.772,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "unknown",
+      "confidence": "Neural ODE",
+      "proof_tier": "-",
+      "notes": "Impact of lipophilicity"
+    },
+    {
+      "metric_id": "gcn_tox_prob",
+      "group": "safety",
+      "module_id": "orch_v3_gcn",
+      "module_label": "GCN Toxicity",
+      "metric_label": "Structural Toxicity Prob",
+      "unit": "0-1",
+      "value": 0.374,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Graph Neural Net",
+      "proof_tier": "-",
+      "notes": "Risk: UNKNOWN"
+    },
+    {
+      "metric_id": "sa_score",
+      "group": "chemistry",
+      "module_id": "orch_v3_cmc",
+      "module_label": "Manufacturability",
+      "metric_label": "Synthetic Accessibility",
+      "unit": "1-10",
+      "value": 1.32,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "RDKit/Heuristic",
+      "proof_tier": "-",
+      "notes": "Lower is easier"
+    },
+    {
+      "metric_id": "predicted_tm",
+      "group": "chemistry",
+      "module_id": "orch_v3_cmc",
+      "module_label": "Manufacturability",
+      "metric_label": "Predicted Melting Point",
+      "unit": "\u00b0C",
+      "value": 274.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "medium",
+      "confidence": "QSPR",
+      "proof_tier": "-",
+      "notes": "Solid state property"
+    },
+    {
+      "metric_id": "mcts_status",
+      "group": "chemistry",
+      "module_id": "orch_v3_mcts",
+      "module_label": "Generative Optimization",
+      "metric_label": "Optimization Outcome",
+      "unit": "",
+      "value": "success (+0.33)",
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "medium",
+      "confidence": "MCTS",
+      "proof_tier": "-",
+      "notes": "AI improvement attempt"
+    },
+    {
+      "metric_id": "kinase_dls",
+      "group": "chemistry",
+      "module_id": "orch_v3_kinase",
+      "module_label": "Kinase Drug-Likeness",
+      "metric_label": "Kinase Score",
+      "unit": "0-1",
+      "value": 0.99,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Heuristic",
+      "proof_tier": "-",
+      "notes": ""
+    },
+    {
+      "metric_id": "cns_bbb_band_qc",
+      "group": "safety",
+      "module_id": "orch_v3_cns",
+      "module_label": "CNS Penetration",
+      "metric_label": "BBB Band (QC Consensus)",
+      "unit": "",
+      "value": "low",
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "high",
+      "confidence": "Universal QC rules",
+      "proof_tier": "-",
+      "notes": "Physchem-validated classification"
+    },
+    {
+      "metric_id": "cns_mpo_score",
+      "group": "safety",
+      "module_id": "orch_v3_cns",
+      "module_label": "CNS Penetration",
+      "metric_label": "CNS MPO Score",
+      "unit": "0-6",
+      "value": 1.4,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "high",
+      "confidence": "Heuristic",
+      "proof_tier": "-",
+      "notes": "Multi-parameter optimization"
+    },
+    {
+      "metric_id": "cyp_substrate_qc",
+      "group": "safety",
+      "module_id": "orch_v3_cyp",
+      "module_label": "CYP Assessment",
+      "metric_label": "CYP Substrate (QC Aggregate)",
+      "unit": "0-1",
+      "value": 0.714,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "high",
+      "confidence": "Universal QC aggregation",
+      "proof_tier": "-",
+      "notes": "QC aggregate (primary: CYP2C9)"
+    },
+    {
+      "metric_id": "cyp_inhibitor_qc",
+      "group": "safety",
+      "module_id": "orch_v3_cyp",
+      "module_label": "CYP Assessment",
+      "metric_label": "CYP Inhibitor (QC Aggregate)",
+      "unit": "0-1",
+      "value": 0.287,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Universal QC aggregation",
+      "proof_tier": "-",
+      "notes": ""
+    },
+    {
+      "metric_id": "spectral_relevance",
+      "group": "biology",
+      "module_id": "orch_v3_spectral",
+      "module_label": "Spectral Analysis",
+      "metric_label": "Target Relevance",
+      "unit": "0-1",
+      "value": 0.624,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Graph Spectral",
+      "proof_tier": "-",
+      "notes": "Network connectivity"
+    },
+    {
+      "metric_id": "herg_risk",
+      "group": "safety",
+      "module_id": "orch_v3_tox_prof",
+      "module_label": "Toxicity Profile (Reconciled)",
+      "metric_label": "hERG Cardiotoxicity Risk",
+      "unit": "0-1",
+      "value": 0.198,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Medium",
+      "proof_tier": "-",
+      "notes": "ML Model. Alerts: 0"
+    },
+    {
+      "metric_id": "mech_verdict",
+      "group": "model",
+      "module_id": "orch_v3_mech",
+      "module_label": "Mechanistic Extensions",
+      "metric_label": "BBB permeability Verdict",
+      "unit": "",
+      "value": "Low",
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "medium",
+      "confidence": "Aggregated",
+      "proof_tier": "-",
+      "notes": "5 components analyzed"
+    },
+    {
+      "metric_id": "qc_status",
+      "group": "model",
+      "module_id": "orchestrator_v4_qc",
+      "module_label": "Quality Control",
+      "metric_label": "QC Status",
+      "unit": "",
+      "value": "ok",
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Universal QC layer",
+      "proof_tier": "-",
+      "notes": ""
+    },
+    {
+      "metric_id": "qc_chem_space_penalty",
+      "group": "model",
+      "module_id": "orchestrator_v4_qc",
+      "module_label": "Quality Control",
+      "metric_label": "Chem-Space Penalty",
+      "unit": "",
+      "value": 0.143,
+      "ci_lower": null,
+      "ci_upper": null,
+      "risk_level": "low",
+      "confidence": "Universal QC layer",
+      "proof_tier": "-",
+      "notes": "Distance from target chem-space box"
+    }
+  ],
+  "summary": {
+    "total_metrics": 16,
+    "modules_run": [
+      "orchestrator_v4",
+      "proteomics_validation",
+      "sar_explorer"
+    ],
+    "modules_failed": []
+  }
+}

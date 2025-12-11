@@ -1,0 +1,2 @@
+candidate_id,target_symbol,smiles,herg_cardiotoxicity,cytotoxicity,mutagenicity,structural_alerts,pains_hits,alert_hits,cyp_inhibition_risk,clearance_risk,bbb_permeability,solubility_logs,overall_risk_level,risk_score,program_stage,trial_count
+HDAC6_benchmark,HDAC6,O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO,0.65,,,0,0,0,,medium,,,Medium,0.65,clinical,0

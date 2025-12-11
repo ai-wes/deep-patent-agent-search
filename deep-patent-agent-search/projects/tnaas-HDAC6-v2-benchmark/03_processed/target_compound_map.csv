@@ -1,0 +1,2 @@
+candidate_id,smiles,target_id,target_symbol,rank
+0,O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2Cl)nc1)NO,HDAC6,HDAC6,1

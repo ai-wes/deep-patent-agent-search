@@ -1,0 +1,9 @@
+project_id: tnaas-HDAC6-v2-benchmark
+created: '2025-11-10T14:09:03.409391Z'
+weights:
+  genetics_score: 0.35
+  pathway_centrality: 0.15
+  structural_tractability: 0.2
+  safety_risk_score: -0.15
+  ip_prior_art_risk: -0.15
+shortlist_threshold: 0.6

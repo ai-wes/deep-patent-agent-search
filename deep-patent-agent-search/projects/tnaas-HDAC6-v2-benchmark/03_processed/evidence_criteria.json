@@ -1,0 +1,21 @@
+{
+  "indication": "Neurodegenerative diseases / cancer",
+  "include": [
+    "human genetics (GWAS/case-control) supporting target–disease",
+    "mechanism-of-action evidence (activation/inhibition)",
+    "expression in disease-relevant tissues/cell types",
+    "pathway/ppi context consistent with phenotype",
+    "ortholog phenotypes aligned with indication",
+    "disease-specific endpoints for Neurodegenerative diseases / cancer"
+  ],
+  "exclude": [
+    "retracted studies",
+    "unreplicated single-figure claims",
+    "pure in-silico without orthogonal support"
+  ],
+  "quality_bands": {
+    "A": "≥2 independent sources with high confidence and clinical signal",
+    "B": "1–2 sources with strong preclinical support",
+    "C": "Suggestive or conflicting evidence; requires validation"
+  }
+}
