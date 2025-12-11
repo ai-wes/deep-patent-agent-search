@@ -15,8 +15,8 @@
 # mypy: disable-error-code="attr-defined,arg-type"
 import logging
 import os
-from typing import Any
-
+from typing import Any, Optional
+from google.adk.apps.app import App  # <--- ADD THIS IMPORT
 import vertexai
 from google.adk.artifacts import GcsArtifactService, InMemoryArtifactService
 from google.cloud import logging as google_cloud_logging
@@ -35,6 +35,21 @@ from app.app_utils.typing import Feedback
 
 
 class AgentEngineApp(AdkApp):
+
+    def __init__(
+        self,
+        app: App, 
+        *args, 
+        **kwargs
+    ):
+        # 1. Save the app explicitly to self.app
+        self.app = app
+        
+        # 2. Call parent __init__
+        super().__init__(app=app, *args, **kwargs)
+
+
+
     def set_up(self) -> None:
         """Initialize the agent engine app with logging and telemetry."""
         vertexai.init()
@@ -112,12 +127,31 @@ class AgentEngineApp(AdkApp):
         """
         return self.trace_service
 
+
+    # --- ADD THIS METHOD ---
+    def query(self, input: str, **kwargs) -> dict[str, Any]:
+        """
+        Executes a query against the underlying ADK agent.
+        
+        Args:
+            input (str): The user's input query or JSON string.
+            **kwargs: Additional arguments passed in the request body.
+            
+        Returns:
+            dict[str, Any]: The agent's response.
+        """
+        # self.app is the adk_app passed during __init__
+        return self.app.query(input, **kwargs)
+
+
     def register_operations(self) -> dict[str, list[str]]:
         """Registers the operations of the Agent."""
         operations = super().register_operations()
-        operations[""] = operations.get("", []) + ["register_feedback"]
+        # --- UPDATE THIS LINE TO INCLUDE 'query' ---
+        # This tells the Reasoning Engine that 'query' is a public endpoint
+        existing_ops = operations.get("", [])
+        operations[""] = existing_ops + ["register_feedback", "query"] 
         return operations
-
 
 gemini_location = os.environ.get("GOOGLE_CLOUD_LOCATION")
 logs_bucket_name = os.environ.get("LOGS_BUCKET_NAME")
