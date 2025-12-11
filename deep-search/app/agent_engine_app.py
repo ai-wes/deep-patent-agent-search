@@ -31,23 +31,17 @@ from app.app_utils.trace_persistence import (
     SessionStateSnapshot,
     AgentEventTrace
 )
-from app.app_utils.typing import Feedback
+from google.adk.runners import InMemoryRunner  # <--- ADD THIS
+from google.genai import types                 # <--- ENSURE THIS IS PRESENT
+import asyncio                                 # <--- ENSURE THIS IS PRESENT
+from app.app_utils.app_typing import Feedback
 
 
 class AgentEngineApp(AdkApp):
-
-    def __init__(
-        self,
-        app: App, 
-        *args, 
-        **kwargs
-    ):
-        # 1. Save the app explicitly to self.app
+    def __init__(self, app: App, *args, **kwargs):
+        # 1. CRITICAL: Save 'app' explicitly so it persists after pickling
         self.app = app
-        
-        # 2. Call parent __init__
         super().__init__(app=app, *args, **kwargs)
-
 
 
     def set_up(self) -> None:
@@ -131,17 +125,54 @@ class AgentEngineApp(AdkApp):
     # --- ADD THIS METHOD ---
     def query(self, input: str, **kwargs) -> dict[str, Any]:
         """
-        Executes a query against the underlying ADK agent.
-        
-        Args:
-            input (str): The user's input query or JSON string.
-            **kwargs: Additional arguments passed in the request body.
-            
-        Returns:
-            dict[str, Any]: The agent's response.
+        Executes a query against the underlying ADK agent using InMemoryRunner.
+        The Reasoning Engine calls this method synchronously.
         """
-        # self.app is the adk_app passed during __init__
-        return self.app.query(input, **kwargs)
+        self.logger.log_text(f"Received query input: {input}")
+        
+        # 2. Use a runner to execute the ADK App
+        runner = InMemoryRunner(app=self.app)
+        
+        # 3. Define async execution logic
+        async def _run_agent():
+            # Create user message content
+            user_msg = types.Content(role="user", parts=[types.Part(text=input)])
+            
+            # Use a session ID (new one per request, or passed in via kwargs)
+            session_id = kwargs.get("session_id", "default-session")
+            
+            # Run the agent
+            events = []
+            async for event in runner.run_async(
+                user_id="vertex-user",
+                session_id=session_id,
+                new_message=user_msg
+            ):
+                events.append(event)
+            return events
+
+        # 4. Run async loop synchronously
+        try:
+            events = asyncio.run(_run_agent())
+            
+            # 5. Extract the final answer from events
+            final_text = "No response text generated."
+            # Iterate backwards to find the last meaningful text response
+            for event in reversed(events):
+                # Check if event has content and parts
+                if hasattr(event, 'content') and event.content and event.content.parts:
+                    # Simple extraction: join all text parts
+                    text_parts = [p.text for p in event.content.parts if p.text]
+                    if text_parts:
+                        final_text = "\n".join(text_parts)
+                        break
+            
+            return {"response": final_text}
+
+        except Exception as e:
+            self.logger.log_text(f"Error during query execution: {e}", severity="ERROR")
+            return {"error": str(e)}
+
 
 
     def register_operations(self) -> dict[str, list[str]]:

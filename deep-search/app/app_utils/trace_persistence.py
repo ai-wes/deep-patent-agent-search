@@ -25,7 +25,7 @@ from google.adk.events import Event
 from google.cloud import storage
 from pydantic import BaseModel, Field
 
-from .typing import Feedback
+from .app_typing import Feedback
 
 # Configure logging
 logger = logging.getLogger(__name__)
